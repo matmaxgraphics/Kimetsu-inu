@@ -42,6 +42,9 @@ h4 {
 
 h1, h2, h3 {
   font-family: "Reggae One", cursive;
+  color: #FD5200;
+  -webkit-text-stroke: 0.1px #FFB800;
+  text-transform: uppercase;
 }
 
 a {
@@ -267,3 +270,208 @@ li {
   }
 }
 /*=======END OF HEADER SECTION STYLING======*/
+/*=========OVERVIEW-HOMEPAGE-SECTION=======*/
+.overview-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 10px 24px;
+  width: 100%;
+  margin-top: 96px;
+}
+.overview-section h2 {
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+.overview-section .description-container {
+  padding-right: 24px;
+}
+.overview-section .description-container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+}
+.overview-section .description-container h2 {
+  width: 80%;
+  line-height: 1.2;
+}
+.overview-section .description-container p {
+  margin-bottom: 36px;
+}
+.overview-section .image-container {
+  width: 50%;
+}
+.overview-section .image-container img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+@media only screen and (max-width: 700px) {
+  .overview-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .overview-section .description-container, .overview-section .image-container {
+    width: 100%;
+  }
+  .overview-section .image-container {
+    margin-top: 48px;
+  }
+}
+/*========END OF HOMEPAGE-OVERVIEW SECTION======*/
+.gameplay-section {
+  margin-top: 96px;
+}
+.gameplay-section h2 {
+  text-align: center;
+}
+.gameplay-section .gameplay-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 10px 24px;
+  width: 100%;
+  margin-top: 96px;
+  margin-top: 48px;
+}
+.gameplay-section .gameplay-wrapper h2 {
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+.gameplay-section .gameplay-wrapper .description-container {
+  padding-right: 24px;
+}
+.gameplay-section .image-container {
+  width: 50%;
+}
+.gameplay-section .image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+.gameplay-section .description-container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+  margin-left: 48px;
+}
+.gameplay-section .description-container .btn {
+  float: right;
+}
+.gameplay-section .description-container .gameplay-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 48px;
+  width: 100%;
+}
+.gameplay-section .description-container .gameplay-item .img-icon {
+  width: 20%;
+  height: auto;
+  margin-right: 24px;
+}
+.gameplay-section .description-container .gameplay-item .img-icon img {
+  width: 80%;
+}
+.gameplay-section .description-container .gameplay-item .text-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+}
+.gameplay-section .description-container h4 {
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-family: "Reggae One", cursive;
+  color: #FD5200;
+  margin-bottom: 12px;
+}
+
+@media only screen and (max-width: 900px) {
+  .gameplay-section .description-container .gameplay-item .img-icon {
+    width: 30%;
+    height: auto;
+    margin-right: 12px;
+  }
+  .gameplay-section .description-container .gameplay-item .img-icon img {
+    width: 100%;
+  }
+  .gameplay-section .description-container .gameplay-item .text-description {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .gameplay-section .gameplay-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    margin-top: 24px;
+  }
+  .gameplay-section .gameplay-wrapper .description-container, .gameplay-section .gameplay-wrapper .image-container {
+    width: 100%;
+  }
+  .gameplay-section .description-container {
+    margin-top: 48px;
+    margin-left: unset;
+  }
+  .gameplay-section .description-container .gameplay-item .img-icon {
+    width: 20%;
+    height: auto;
+    margin-right: 24px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .gameplay-section .gameplay-wrapper .gameplay-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .gameplay-section .gameplay-wrapper .gameplay-item .img-icon {
+    width: 30%;
+    height: auto;
+    margin-bottom: 12px;
+  }
+  .gameplay-section .gameplay-wrapper .gameplay-item .img-icon img {
+    width: 100%;
+    height: auto;
+  }
+  .gameplay-section .gameplay-wrapper .gameplay-item .text-description {
+    width: 100%;
+  }
+}
