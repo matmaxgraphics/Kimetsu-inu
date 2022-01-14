@@ -66,6 +66,7 @@ a{
 p{
     font-size: 16px;
     color: $secondaryColor;
+    line-height: 1.4;
 }
 li{
     list-style: none;
@@ -125,6 +126,9 @@ li{
 @media only screen and (max-width: 1040px) {
     .navbar{
         background-color: $bgColor;
+        position: fixed;
+        top: 0;
+        width: 100%;
     }
     .nav-menu {
         position: fixed;
@@ -136,8 +140,7 @@ li{
         border-radius: 10px;
         text-align: center;
         transition: 0.3s;
-        box-shadow:
-            0 10px 27px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
     }
 
     .nav-menu.active {
@@ -197,7 +200,9 @@ li{
   }
 @media only screen and (max-width: 940px) {
     .hero-container{
-        margin-top: 60px;
+        .details-container{
+            margin-top: 60px;
+        }
         .logo-text{
             width: 90%;
         }
@@ -261,6 +266,7 @@ li{
 
         .description-container, .image-container{
             width: 100%;
+            padding-right: unset;
         }
         .image-container{
             margin-top: 48px;
@@ -270,6 +276,7 @@ li{
 /*========END OF HOMEPAGE-OVERVIEW SECTION======*/
 
 
+/*=========HOMEPAGE GAMEPLAY SECTION STYLING========*/
 .gameplay-section{
     margin-top: 96px;
     h2{
@@ -353,6 +360,7 @@ li{
     
             .description-container, .image-container{
                 width: 100%;
+                padding-right: unset;
             }
         }
         .description-container{
@@ -396,4 +404,67 @@ li{
         }
     }
     
+}
+/*=========END OF HOMEPAGE GAMEPLAY SECTION STYLING========*/
+
+
+/*==========ROAADMAP SECTION STYLING========*/
+.roadmap-section{
+    margin-top: 96px;
+    padding: 0 15px;
+    margin-bottom: 48px;
+    h2{
+        text-align: center;
+        margin-bottom: 48px;
+    }
+}
+.roadmap-container{
+    width: 100%;
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+}
+.owl-carousel .owl-item img{
+    width: unset;
+}
+.roadmap-wrapper{
+    max-width: 380px;
+    height: auto;
+    background-color: $bgColor;
+    border: 1px solid $borderColor;
+    border-radius: 12px;
+    padding: 12px;
+    .roadmap-number{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 24px 0;
+    }
+    img{
+        width: 100px !important;
+        height: auto;
+    }
+
+    .roadmap-item{
+        margin-top: 48px;
+        h4{
+            margin-bottom: 24px;
+            color: $primaryColor;
+        }
+        .roadmap-list{
+            margin-bottom: 12px;
+        }
+        li{
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            color: $secondaryColor;
+            img{
+                margin-right: 12px;
+                padding: 8px;
+                width: 35px !important;
+            }
+        }
+    }
 }
