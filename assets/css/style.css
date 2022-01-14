@@ -156,6 +156,7 @@ li {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 99999999999;
   }
 
   .nav-menu {
@@ -174,10 +175,12 @@ li {
     transition: 0.3s;
     -webkit-box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
             box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    z-index: 99999999999;
   }
 
   .nav-menu.active {
     left: 0;
+    z-index: 99999999999;
   }
 
   .nav-item {
@@ -560,4 +563,87 @@ li {
   margin-right: 12px;
   padding: 8px;
   width: 35px !important;
+}
+
+.kinuverse-section {
+  padding: 0 15px;
+}
+
+.kinuverse-wrapper {
+  background: url("../images/meta-bg.jpg") no-repeat center;
+  height: 350px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.kinuverse-wrapper h2 {
+  margin-bottom: 24px;
+}
+
+/*======FOOTER SECTION STYLING=====*/
+footer {
+  margin-top: 96px;
+  height: 400px;
+  position: relative;
+}
+
+.footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.footer-container .footer-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 24px;
+}
+.footer-container .footer-content h4 {
+  font-family: "Reggae One", cursive;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.footer-container .footer-content li {
+  margin-bottom: 12px;
+}
+.footer-container .footer-content li a {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.footer-container .footer-content li a:hover {
+  color: #20BFB7;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.footer-container .footer-logo {
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 780px) {
+  footer {
+    height: auto;
+  }
+
+  .footer-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-left: 12px;
+    padding-bottom: 12px;
+  }
 }
