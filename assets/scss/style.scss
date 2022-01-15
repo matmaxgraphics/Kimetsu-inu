@@ -517,7 +517,8 @@ footer{
         }
     }
     .footer-logo{
-        max-width: 100%;
+        width: 100%;
+        min-width: 200px;
     }
 }
 
@@ -526,8 +527,11 @@ footer{
         height: auto;
     }
     .footer-container{
-        flex-direction: column;
+        flex-flow: row wrap;
         padding-left: 12px;
         padding-bottom: 12px;
+        .footer-conten{
+            flex: 0;
+        }
     }
 }

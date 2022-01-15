@@ -630,7 +630,8 @@ footer {
   transition: all 0.3s;
 }
 .footer-container .footer-logo {
-  max-width: 100%;
+  width: 100%;
+  min-width: 200px;
 }
 
 @media only screen and (max-width: 780px) {
@@ -639,11 +640,16 @@ footer {
   }
 
   .footer-container {
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
     padding-left: 12px;
     padding-bottom: 12px;
+  }
+  .footer-container .footer-conten {
+    -webkit-box-flex: 0;
+        -ms-flex: 0;
+            flex: 0;
   }
 }
