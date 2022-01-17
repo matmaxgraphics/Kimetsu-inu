@@ -92,6 +92,10 @@ li{
 }
 .nav-logo {
     color: #fff;
+    font-size: 18px;
+    color: $secondaryColor;
+    font-family: 'Reggae One', cursive;
+    -webkit-text-stroke: 0.1px $secondaryColor;
 }
 .hamburger{
     display: none;
