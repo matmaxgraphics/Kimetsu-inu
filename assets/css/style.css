@@ -833,3 +833,146 @@ footer {
 .team-section {
   margin-bottom: 72px;
 }
+
+/*========GAMEPLAY WEBPAGE STYLING======*/
+.game-overview__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 10px 24px;
+  width: 100%;
+  margin-top: 96px;
+}
+.game-overview__section h2 {
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+.game-overview__section .description-container {
+  padding-right: 24px;
+}
+.game-overview__section .description-container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+}
+.game-overview__section .description-container h2 {
+  width: 80%;
+  line-height: 1.2;
+}
+.game-overview__section .description-container p {
+  margin-bottom: 36px;
+}
+.game-overview__section .image-container {
+  width: 50%;
+}
+.game-overview__section .image-container img {
+  width: 100%;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 12px;
+}
+
+@media only screen and (max-width: 700px) {
+  .game-overview__section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .game-overview__section .description-container, .game-overview__section .image-container {
+    width: 100%;
+    padding-right: unset;
+  }
+  .game-overview__section .description-container h2 {
+    width: 100%;
+  }
+  .game-overview__section .image-container {
+    margin-top: 48px;
+  }
+}
+/*-------PLAYER SECTION STYLING------*/
+.player-section {
+  margin-top: 96px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 10px 24px;
+  width: 100%;
+  margin-top: 96px;
+  margin-top: 48px;
+}
+.player-section h2 {
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+.player-section .description-container {
+  padding-right: 24px;
+}
+.player-section .image-container {
+  width: 50%;
+}
+.player-section .image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+.player-section .description-container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+  margin-left: 48px;
+}
+
+@media only screen and (max-width: 700px) {
+  .player-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    width: 100%;
+    margin-top: 24px;
+  }
+  .player-section .description-container, .player-section .image-container {
+    width: 100%;
+    padding-right: unset;
+  }
+  .player-section .description-container {
+    margin-top: 48px;
+    margin-bottom: 24px;
+    margin-left: unset;
+  }
+}
+/*-------development-section STYLING-----*/
+.development-section {
+  margin-top: 96px;
+  padding: 0 24px;
+}
+.development-section h2 {
+  text-align: center;
+  margin-bottom: 12px;
+}
+.development-section p {
+  margin-bottom: 24px;
+}
