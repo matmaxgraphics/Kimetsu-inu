@@ -33,3 +33,9 @@
     flex-direction: column;
     width: 100%;
 }
+
+@mixin h4Preset {
+    margin-bottom: 12px;
+    font-family: 'Reggae One', cursive;
+    color: $primaryColor;
+}
