@@ -217,14 +217,20 @@ li {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../images/background.png") no-repeat center;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/background.png") no-repeat center;
   background-size: cover;
+  max-width: 1440px;
+  margin: auto;
 }
 
 .hero-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 10px 24px;
   width: 100%;
+  margin-top: 24px;
 }
 .hero-container .details-container {
   width: 50%;
@@ -241,6 +247,11 @@ li {
   height: auto;
 }
 
+@media only screen and (min-width: 1000px) {
+  .hero-container .details-container {
+    margin-left: 12px;
+  }
+}
 @media only screen and (max-width: 940px) {
   .hero-container .details-container {
     margin-top: 60px;
@@ -686,48 +697,36 @@ footer {
             flex: 0;
   }
 }
+.character-section {
+  position: relative;
+}
 .character-section h2 {
   text-align: center;
+}
+.character-section img.nav {
+  width: 36px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+}
+.character-section .next {
+  right: 30px;
+  cursor: pointer;
+}
+.character-section .prev {
+  left: 30px;
+  cursor: pointer;
 }
 
 .character-container {
   margin: 24px 0;
 }
 
-.thumbnail-character {
-  overflow-x: auto;
-  padding: 12px;
-}
-.thumbnail-character ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.thumbnail-character li.char-list {
-  max-width: 100px;
-  height: 100px;
-  margin-right: 24px;
-}
-.thumbnail-character li.char-list img {
-  width: 100%;
-  max-height: 100px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  border-radius: 12px;
-}
-.thumbnail-character li.char-list img.active {
-  border: 2px solid #20BFB7;
-}
-
 .thumbnail-preview {
   max-width: 500px;
   margin: auto;
   padding: 24px;
+  text-align: center;
 }
 .thumbnail-preview .preview-img {
   width: 80%;
@@ -737,21 +736,11 @@ footer {
   -o-object-position: center;
      object-position: center;
 }
-
-@media only screen and (max-width: 400px) {
-  .thumbnail-character {
-    overflow-x: auto;
-    padding: 12px;
-  }
-  .thumbnail-character li.char-list {
-    margin-right: 12px;
-  }
-  .thumbnail-character li.char-list img {
-    width: 100%;
-    max-height: 100px;
-    border-radius: 8px;
-  }
+.thumbnail-preview h2 {
+  font-size: 48px;
+  font-size: ViceCitySans !important;
 }
+
 /*=======OVERVIEW PAGE STYLING======*/
 .page-wrapper {
   padding: 0 36px;

@@ -185,12 +185,16 @@ li{
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/background.png') no-repeat center;
     background-size: cover;
+    max-width: 1440px;
+    margin: auto;
 }
 
 .hero-container {
     display: flex;
+    align-items: center;
     padding: 10px 24px;
     width: 100%;
+    margin-top: 24px;
     .details-container{
         width: 50%;
         h4{
@@ -205,7 +209,14 @@ li{
         width: 80%;
         height: auto
     }
-  }
+}
+@media only screen and (min-width: 1000px) {
+    .hero-container{
+        .details-container{
+            margin-left: 12px;
+        }
+    }
+}
 @media only screen and (max-width: 940px) {
     .hero-container{
         .details-container{
@@ -566,64 +577,48 @@ footer{
 
 
 .character-section{
+    position: relative;
     h2{
         text-align: center;
+    }
+    img.nav{
+        width: 36px;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        
+    }
+    .next{
+        right: 30px;
+        cursor: pointer;
+    }
+    .prev{  
+        left: 30px;
+        cursor: pointer;
     }
 }
 
 .character-container{
     margin: 24px 0;
 }
-.thumbnail-character{
-    overflow-x: auto;
-    padding: 12px;
-    ul{
-        display: flex;
-        justify-content: center;
-    }
-    li.char-list{
-        max-width: 100px;
-        height: 100px;
-        margin-right: 24px;
-        
-        img{
-            width: 100%;
-            max-height: 100px;
-            object-fit: cover;
-            object-position: center;
-            border-radius: 12px;
-        }
-        img.active{
-            border: 2px solid $secondaryColor;
-        }
-    }
-}
 
 .thumbnail-preview{
     max-width: 500px;
     margin: auto;
     padding: 24px;
+    text-align: center;
     .preview-img{
         width: 80%;
         height: auto;
         object-fit: cover;
         object-position: center;
     }
-}
-@media only screen and (max-width: 400px){
-    .thumbnail-character{
-        overflow-x: auto;
-        padding: 12px;
-        li.char-list{
-            margin-right: 12px;
-            img{
-                width: 100%;
-                max-height: 100px;
-                border-radius: 8px;
-            }
-        }
+    h2{
+        font-size: 48px;
+        font-size: ViceCitySans !important;
     }
 }
+
 
 
 
