@@ -18,6 +18,8 @@
     <!--Custom Stylesheet-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.11/dist/css/splide.min.css">
+
     <!--OWL CAROUSEL CSS CDN-->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css">
@@ -221,26 +223,31 @@
     </section>
 
 
-    <section class="character-section">
+    <!-- <section class="character-section">
         <h2>CHARACTERS</h2>
 
-        <img src="assets/images/prev-btn.png" class="nav prev">
-        <img src="assets/images/next-btn.png" class="nav next">
-        <div class="character-container">
-            <div class="thumbnail-preview">
-                <img src="assets/images/preview.png" alt="thumbnail preview box" class="preview-img">
-                <h2>KINU</h2>
+        <img src="assets/images/prev-btn.png" class="prev" role="button">
+        <img src="assets/images/next-btn.png" class="next" role="button">
+        <main class="character-container">
+            <div class="splide">
+                <div class="splide__arrows">
+                    <button class="splide__arrow splide__arrow--prev">
+                        Prev
+                    </button>
+                    <button class="splide__arrow splide__arrow--next">
+                        Next
+                    </button>
+                </div>
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">Slide 01</li>
+                        <li class="splide__slide">Slide 02</li>
+                        <li class="splide__slide">Slide 03</li>
+                    </ul>
+                </div>
             </div>
-            <div class="thumbnail-preview">
-                <img src="assets/images/preview.png" alt="thumbnail preview box" class="preview-img">
-                <h2>KINU</h2>
-            </div>
-            <div class="thumbnail-preview">
-                <img src="assets/images/preview.png" alt="thumbnail preview box" class="preview-img">
-                <h2>KINU</h2>
-            </div>
-        </div>
-    </section>
+        </main>
+    </section> -->
 
     <section class="kinuverse-section">
         <div class="kinuverse-wrapper">
@@ -290,15 +297,16 @@
     <!--Jquery CDN-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+<!-- SPLIDE CAROUSEL SLIDER -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.11/dist/js/splide.min.js"></script>
+<script src="assets/js/splide.js"></script>
+
 <!--OWL CAROUSEL 2 CDN-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
 
 
 <script src="assets/js/owl.js"></script>
 
-<!-- KENWHEELER CAROUSEL SLIDER -->
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="assets/js/wheeler.js"></script>
+
 </body>
 </html>

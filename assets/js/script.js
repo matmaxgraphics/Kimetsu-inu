@@ -14,3 +14,11 @@ function closeMenu() {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
 }
+
+
+//MUSIC PLAYER
+window.addEventListener('click', function () {
+    
+    var audio = document.getElementById("bg-audio");
+    audio.play();
+})

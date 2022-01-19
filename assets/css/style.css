@@ -697,50 +697,6 @@ footer {
             flex: 0;
   }
 }
-.character-section {
-  position: relative;
-}
-.character-section h2 {
-  text-align: center;
-}
-.character-section img.nav {
-  width: 36px;
-  height: auto;
-  position: absolute;
-  top: 50%;
-}
-.character-section .next {
-  right: 30px;
-  cursor: pointer;
-}
-.character-section .prev {
-  left: 30px;
-  cursor: pointer;
-}
-
-.character-container {
-  margin: 24px 0;
-}
-
-.thumbnail-preview {
-  max-width: 500px;
-  margin: auto;
-  padding: 24px;
-  text-align: center;
-}
-.thumbnail-preview .preview-img {
-  width: 80%;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-}
-.thumbnail-preview h2 {
-  font-size: 48px;
-  font-size: ViceCitySans !important;
-}
-
 /*=======OVERVIEW PAGE STYLING======*/
 .page-wrapper {
   padding: 0 36px;
