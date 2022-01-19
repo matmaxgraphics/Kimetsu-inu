@@ -331,10 +331,25 @@ li {
 }
 .overview-section .image-container {
   width: 50%;
+  background: url("../images/video-frame.png") no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.overview-section .image-container img {
-  width: 100%;
+.overview-section .image-container video {
+  width: 85%;
+  max-height: 310px;
   border-radius: 12px;
+  margin-bottom: 36px;
 }
 
 @media only screen and (max-width: 700px) {
