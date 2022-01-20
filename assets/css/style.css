@@ -710,6 +710,54 @@ footer {
             flex: 0;
   }
 }
+.character-section {
+  position: relative;
+  margin-bottom: 48px;
+}
+.character-section h2 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+.character-section .next, .character-section .prev {
+  width: 36px;
+  height: auto;
+}
+
+.character-container {
+  padding: 24px;
+}
+.character-container .splide__slide__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.character-container img {
+  width: 300px;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.character-container h2 {
+  margin-top: 24px;
+  font-size: 48px;
+  font-size: ViceCitySans !important;
+}
+.character-container ul.splide__pagination {
+  display: none;
+}
+
 /*=======OVERVIEW PAGE STYLING======*/
 .page-wrapper {
   padding: 0 36px;
