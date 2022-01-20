@@ -219,6 +219,7 @@ li {
   background-size: cover;
   max-width: 1440px;
   margin: auto;
+  position: relative;
 }
 
 .hero-container {
@@ -231,6 +232,8 @@ li {
   padding: 10px 24px;
   width: 100%;
   margin-top: 24px;
+  position: absolute;
+  top: 10%;
 }
 .hero-container .details-container {
   width: 50%;
@@ -258,6 +261,16 @@ li {
   }
   .hero-container .logo-text {
     width: 90%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .header-section {
+    height: 50vh;
+    background-size: cover;
+  }
+  .header-section .hero-container {
+    top: 2%;
+    margin-top: 12px;
   }
 }
 @media only screen and (max-width: 650px) {
@@ -385,7 +398,7 @@ li {
 /*========END OF HOMEPAGE-OVERVIEW SECTION======*/
 /*=========HOMEPAGE GAMEPLAY SECTION STYLING========*/
 .gameplay-section {
-  margin-top: 96px;
+  margin-top: 24px;
 }
 .gameplay-section h2 {
   text-align: center;
