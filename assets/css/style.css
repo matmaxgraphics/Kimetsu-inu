@@ -392,7 +392,7 @@ li {
     width: 100%;
   }
   .overview-section .image-container {
-    margin-top: 48px;
+    margin-top: -24px;
   }
 }
 /*========END OF HOMEPAGE-OVERVIEW SECTION======*/
@@ -519,6 +519,9 @@ li {
   }
 }
 @media only screen and (max-width: 400px) {
+  .gameplay-section {
+    margin-top: unset;
+  }
   .gameplay-section .gameplay-wrapper .gameplay-item {
     display: -webkit-box;
     display: -ms-flexbox;
