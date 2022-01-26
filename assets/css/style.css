@@ -104,6 +104,8 @@ li {
       -ms-flex-align: center;
           align-items: center;
   padding: 1rem 1.5rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#02010A), color-stop(28.12%, rgba(2, 1, 10, 0.78)), to(rgba(2, 1, 10, 0.03)));
+  background: linear-gradient(180deg, #02010A 0%, rgba(2, 1, 10, 0.78) 28.12%, rgba(2, 1, 10, 0.03) 100%);
 }
 
 .nav-logo {
@@ -166,7 +168,7 @@ li {
   .nav-menu {
     position: fixed;
     left: -100%;
-    top: 5rem;
+    top: 2.8rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -214,8 +216,7 @@ li {
 /*=======HEADER SECTION STYLING======*/
 .header-section {
   height: 100vh;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../images/background.png") no-repeat center;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/background.png") no-repeat center;
+  background: url("../images/background-new.png") no-repeat center;
   background-size: cover;
   max-width: 1440px;
   margin: auto;
@@ -226,27 +227,23 @@ li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px 24px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
   margin-top: 24px;
-  position: absolute;
-  top: 10%;
-}
-.hero-container .details-container {
-  width: 50%;
-}
-.hero-container .details-container h4 {
-  font-family: ViceCitySans;
-  margin-top: 24px;
-}
-.hero-container .details-container .cta-container {
-  margin-top: 48px;
+  position: relative;
+  top: 50%;
 }
 .hero-container .logo-text {
-  width: 80%;
+  max-width: 550px;
   height: auto;
 }
 
@@ -268,46 +265,23 @@ li {
     height: 50vh;
     background-size: cover;
   }
-  .header-section .hero-container {
-    top: 2%;
-    margin-top: 12px;
-  }
 }
 @media only screen and (max-width: 650px) {
   .header-section {
-    height: 100vh;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../images/background-md.png") no-repeat center;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/background-md.png") no-repeat center;
+    background: url("../images/background-new.png") no-repeat center;
     background-size: cover;
   }
 }
 @media only screen and (max-width: 600px) {
-  .hero-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .hero-container .details-container {
-    width: 100%;
-    text-align: center;
-  }
-  .hero-container .logo-text {
-    width: 70%;
-  }
-
   .cta-container .btn {
     padding: 10px 30px;
     height: 48px;
   }
 }
 @media only screen and (max-width: 400px) {
+  .hero-container {
+    margin: auto;
+  }
   .hero-container .logo-text {
     width: 90%;
   }
