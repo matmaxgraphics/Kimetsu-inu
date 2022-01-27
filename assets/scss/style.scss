@@ -62,6 +62,9 @@ a{
     transition: 0.3s;
     height: 54px;
     width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 p{
     font-size: 16px;
@@ -269,6 +272,10 @@ li{
         margin-bottom: 24px;
     }
     .cta-links{
+        .cta-icon{
+            font-size: 24px;
+            margin-right: 12px;
+        }
         display: flex;
         flex-direction: row;
         a{
