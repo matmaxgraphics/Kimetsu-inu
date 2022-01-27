@@ -172,7 +172,8 @@ li {
   .nav-menu {
     position: fixed;
     left: -100%;
-    top: 2.8rem;
+    top: 3.3rem;
+    height: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -320,8 +321,8 @@ li {
 }
 .overview-section::before {
   content: "";
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.699)), to(rgba(8, 7, 19, 0.822))), url("../images/bg-2.jpg") no-repeat center;
-  background: linear-gradient(rgba(0, 0, 0, 0.699), rgba(8, 7, 19, 0.822)), url("../images/bg-2.jpg") no-repeat center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(8, 7, 19, 0.4))), url("../images/bg-2.jpg") no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(8, 7, 19, 0.4)), url("../images/bg-2.jpg") no-repeat center;
   background-size: cover;
   position: absolute;
   height: 100%;
