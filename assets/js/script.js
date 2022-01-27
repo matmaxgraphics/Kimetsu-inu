@@ -16,9 +16,3 @@ function closeMenu() {
 }
 
 
-//MUSIC PLAYER
-window.addEventListener('click', function () {
-    
-    var audio = document.getElementById("bg-audio");
-    audio.play();
-})
