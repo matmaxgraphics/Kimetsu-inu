@@ -16,3 +16,6 @@ function closeMenu() {
 }
 
 
+//SIMPLE PARALLAX PLUGIN
+const parallaxImg = document.getElementsByClassName('parallax');
+new simpleParallax(parallaxImg);

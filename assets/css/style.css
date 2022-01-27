@@ -261,11 +261,16 @@ li {
 
 .parallax {
   position: relative;
-  height: 80vh;
-  background: transparent;
+  height: 60%;
+  margin-top: 20PX;
   width: 100%;
 }
 
+@media (max-width: 1040px) {
+  .parallax {
+    margin-top: 30%;
+  }
+}
 @media only screen and (max-width: 940px) {
   .hero-container .logo-text {
     width: 90%;
@@ -277,7 +282,7 @@ li {
   }
   .details-container .logo-text {
     margin-top: 48px;
-    max-width: 550px;
+    max-width: 50px;
     height: auto;
   }
 }
@@ -289,7 +294,7 @@ li {
 }
 @media only screen and (max-width: 400px) {
   .hero-container .logo-text {
-    width: 90%;
+    width: 80%;
   }
 }
 /*=======END OF HEADER SECTION STYLING======*/
@@ -338,8 +343,8 @@ li {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(8, 7, 19, 0.4)), url("../images/bg-2.jpg") no-repeat center;
   background-size: cover;
   position: absolute;
-  height: 100%;
-  top: 115%;
+  height: 100vh;
+  top: 200%;
   left: 0;
   right: 0;
   z-index: -1;
@@ -353,9 +358,8 @@ li {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
-  margin-top: 30%;
   width: 80%;
-  margin: 30% auto 0;
+  margin: 25% auto 0;
   text-align: center;
 }
 .overview-section .description-container h2 {
@@ -424,11 +428,11 @@ li {
 }
 @media (max-width: 480px) {
   .overview-section::before {
-    top: 100%;
+    top: 80%;
   }
   .overview-section .description-container {
     position: relative;
-    margin: 60% auto 0;
+    margin: 70% auto 0;
   }
   .overview-section .image-container {
     margin-top: -36px;
