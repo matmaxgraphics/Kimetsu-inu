@@ -206,7 +206,7 @@ li{
     width: 100%;
     margin-top: 24px;
     position: absolute;
-    top: 75%;
+    top: 80%;
 
     .logo-text{
         max-width: 550px;
@@ -216,21 +216,32 @@ li{
 }
 .parallax{
     position: relative;
-    height: 60%;
-    margin-top: 20PX;
+    height: 50%;
+    margin-top: 20px;
     // background: transparent;
     width: 100%;
 }
 
 @media (max-width: 1040px){
     .parallax{
-        margin-top: 30%;
+        margin-top: 20%;
     }
 }
 @media only screen and (max-width: 940px) {
+    .parallax{
+        height: 60%;
+    }
     .hero-container{
         .logo-text{
             width: 90%;
+        }
+    }
+}
+
+@media (max-width: 800px){
+    .hero-container{
+        .logo-text{
+            max-width: 460px;
         }
     }
 }
@@ -301,7 +312,7 @@ li{
         background-size: cover;
         position: absolute;
         height: 100vh;
-        top: 200%;
+        top: 120%;
         left: 0;
         right: 0;
         z-index: -1;
@@ -344,6 +355,15 @@ li{
         }
     }
 }
+@media (max-width: 1050px){
+    .overview-section{ 
+        .description-container{
+            position: relative;
+            margin: 40% auto 0;
+
+        }
+    }
+}
 @media (max-width: 872px){
     .overview-section{ 
         .description-container{
@@ -376,6 +396,23 @@ li{
         }
     }
 }
+
+@media (max-width: 630px){
+
+    .overview-section{
+        &::before{
+            top: 80%;
+        }
+        .description-container{
+            position: relative;
+            margin: 65% auto 0;
+
+        }
+        .image-container{
+            margin-top: -36px;
+        }
+    }
+}
 @media (max-width: 480px){
     .overview-section{
         &::before{
@@ -383,7 +420,7 @@ li{
         }
         .description-container{
             position: relative;
-            margin: 70% auto 0;
+            margin: 76% auto 0;
 
         }
         .image-container{
@@ -421,6 +458,7 @@ li{
         margin-top: 48px;
     }
     .image-container{
+        border-radius: 12px;
         @include column-img;
         img{
             width: 100%;

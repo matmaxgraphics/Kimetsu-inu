@@ -24,7 +24,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.11/dist/css/splide.min.css">
 
     <!--SIMPLE PARALLAX PLUGIN-->
-<script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+
+    <!--AOS CSS CDN-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!--AOS PLUGIN-->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!--OWL CAROUSEL CSS CDN-->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
@@ -71,7 +77,7 @@
         <div class="hero-container">
             <img class="parallax" src="assets/images/background-new.png" alt="Fight scence between the Shiba and the Wolf">
             <div class="details-container">
-                <img src="assets/images/kinu-textLogo.png" class="logo-text" alt="Designed logo text for The story of Kinu">
+                <img src="assets/images/kinu-textLogo.png" class="logo-text" alt="Designed logo text for The story of Kinu" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-quad">
                 <div class="cta-container">
                     <h2>COMING SOON ON</h2>
                     <div class="cta-links">
@@ -86,16 +92,16 @@
 
     <section class="overview-section">
         <div class="description-container">
-            <h2>OVERVIEW</h2>
-            <p>Kimetsu No Yaiba Inu is a role-playing game with three Shibas on a mission to rescue their abducted Shiba Puppy from the hand of a demon wolf.</p>
-            <p>Through the parallels of the blockchain comes the next level of P2E gaming where players will battle
+            <h2 data-aos="fade-right" data-aos-duration="600" data-aos-easing="ease-in-quad">OVERVIEW</h2>
+            <p data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-quad">Kimetsu No Yaiba Inu is a role-playing game with three Shibas on a mission to rescue their abducted Shiba Puppy from the hand of a demon wolf.</p>
+            <p data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-quad">Through the parallels of the blockchain comes the next level of P2E gaming where players will battle
                 weekly to earn top score on the leaderboard. KINU uses the latest blockchain technology to create an
                 all-new experience, combining P2E gaming, Anime, Manga and NFTs into something entirely unique:
                 The KinuVerse</p>
             <a href="overview.html" class="btn">Know More</a>
         </div>
 
-        <div class="image-container">
+        <div class="image-container" data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-quad">
             <video src="assets/images/mov_bbb.mp4" poster="assets/images/video-img.png" preload controls>
             This browser can't play this video
             </video>
@@ -103,12 +109,12 @@
     </section>
 
     <section class="gameplay-section">
-        <h2>the gameplay</h2>
+        <h2 data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-quad">the gameplay</h2>
         <main class="gameplay-wrapper">
-            <div class="image-container">
-                <img src="assets/images/gameplay-img.jpg" alt="image showing Shiba rescue mission">
+            <div class="image-container" data-aos="fade-right" data-aos-duration="600" data-aos-easing="ease-in-quad">
+                <img src="assets/images/gameplay-img.jpg" alt="image showing Shiba rescue mission" class="gameImg">
             </div>
-            <div class="description-container">
+            <div class="description-container" data-aos="fade-left" data-aos-duration="600" data-aos-easing="ease-in-quad">
                 <div class="gameplay-item">
                     <div class="img-icon">
                         <img src="assets/images/anime-char.png" alt="iconic image for anime character Kanata">
@@ -149,88 +155,90 @@
     </section>
 
     <section class="roadmap-section">
-        <h2>ROADMAP</h2>
-        <div class="roadmap-container owl-carousel owl-theme" id="slider">
-            <div class="roadmap-wrapper item">
+        <h2 data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-quad">ROADMAP</h2>
+        <div class="animation-wrapper" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-quad">
+            <div class="roadmap-container owl-carousel owl-theme" id="slider">
+                <div class="roadmap-wrapper item">
 
-                <div class="roadmap-number">
-                    <img src="assets/images/ring-1.png" class="roadmap-ring">
+                    <div class="roadmap-number">
+                        <img src="assets/images/ring-1.png" class="roadmap-ring">
+                    </div>
+
+                    <div class="roadmap-item">
+                        <h4>KINU Series 1</h4>
+                        <ul>
+                            <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img"> Branding & digital marketing strategy</li>
+                            <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Website Launch</li>
+                            <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Official Kinu Token Launch</li>
+                            <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Audit Report</li>
+                            <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Listing on Coingecko</li>
+                            <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">500 holders</li>
+                            <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">1000 Telegram members</li>
+                            <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Hypergrowth of the community</li>
+                            <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Display Logo and Price in Trust Wallet</li>
+                            <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Listing on CoinMarketCap</li>
+                            <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Micro Influencers</li>
+                            <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Initial Game development Development</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="roadmap-item">
-                    <h4>KINU Series 1</h4>
-                    <ul>
-                        <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img"> Branding & digital marketing strategy</li>
-                        <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Website Launch</li>
-                        <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Official Kinu Token Launch</li>
-                        <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Audit Report</li>
-                        <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Listing on Coingecko</li>
-                        <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">500 holders</li>
-                        <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">1000 Telegram members</li>
-                        <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Hypergrowth of the community</li>
-                        <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Display Logo and Price in Trust Wallet</li>
-                        <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Listing on CoinMarketCap</li>
-                        <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Micro Influencers</li>
-                        <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Initial Game development Development</li>
-                    </ul>
-                </div>
-            </div>
+                <div class="roadmap-wrapper item">
 
-            <div class="roadmap-wrapper item">
+                    <div class="roadmap-number">
+                        <img src="assets/images/ring-2.png" class="roadmap-ring">
+                    </div>
 
-                <div class="roadmap-number">
-                    <img src="assets/images/ring-2.png" class="roadmap-ring">
+                    <div class="roadmap-item">
+                        <h4>KINU Series 2</h4>
+                        <ul>
+                            <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Full-on marketing deployment, including several influencers News press (ex. Cointelegraph)</li>
+                            <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Banner ads on listing website</li>
+                            <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Get trending in Dextools</li>
+                            <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">5000 holders</li>
+                            <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">2500 telegram members</li>
+                            <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Tier 2 Game development</li>
+                            <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Project Reviews Part I</li>
+                            <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Game character release</li>
+                            <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">CEX/DEX</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="roadmap-item">
-                    <h4>KINU Series 2</h4>
-                    <ul>
-                        <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Full-on marketing deployment, including several influencers News press (ex. Cointelegraph)</li>
-                        <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Banner ads on listing website</li>
-                        <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Get trending in Dextools</li>
-                        <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">5000 holders</li>
-                        <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">2500 telegram members</li>
-                        <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Tier 2 Game development</li>
-                        <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Project Reviews Part I</li>
-                        <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Game character release</li>
-                        <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">CEX/DEX</li>
-                    </ul>
-                </div>
-            </div>
+                <div class="roadmap-wrapper item">
 
-            <div class="roadmap-wrapper item">
+                    <div class="roadmap-number">
+                        <img src="assets/images/ring-3.png" class="roadmap-ring">
+                    </div>
 
-                <div class="roadmap-number">
-                    <img src="assets/images/ring-3.png" class="roadmap-ring">
+                    <div class="roadmap-item">
+                        <h4>KINU Series 3</h4>
+                        <ul>
+                            <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Major Influencers Part II</li>
+                            <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Certik Audit</li>
+                            <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img"> KINU magazine season 1 (1-6)</li>
+                            <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Project Reviews Part II</li>
+                            <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Full Playable game</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="roadmap-item">
-                    <h4>KINU Series 3</h4>
-                    <ul>
-                        <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Major Influencers Part II</li>
-                        <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Certik Audit</li>
-                        <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img"> KINU magazine season 1 (1-6)</li>
-                        <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Project Reviews Part II</li>
-                        <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Full Playable game</li>
-                    </ul>
-                </div>
-            </div>
+                <div class="roadmap-wrapper item">
 
-            <div class="roadmap-wrapper item">
+                    <div class="roadmap-number">
+                        <img src="assets/images/ring-4.png" class="roadmap-ring">
+                    </div>
 
-                <div class="roadmap-number">
-                    <img src="assets/images/ring-4.png" class="roadmap-ring">
-                </div>
-
-                <div class="roadmap-item">
-                    <h4>KINU Series 4</h4>
-                    <ul>
-                        <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Full game available of android/iOS</li>
-                        <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img"> Anime series 1-6</li>
-                        <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img"> Major partnerships</li>
-                        <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Major exchanges</li>
-                        <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">KINU community event</li>
-                    </ul>
+                    <div class="roadmap-item">
+                        <h4>KINU Series 4</h4>
+                        <ul>
+                            <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Full game available of android/iOS</li>
+                            <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img"> Anime series 1-6</li>
+                            <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img"> Major partnerships</li>
+                            <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">Major exchanges</li>
+                            <li class="roadmap-list"><img src="assets/images/list-icon.png" alt="image icon for roadmap list" class="list-img">KINU community event</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -324,6 +332,7 @@
 
 
 <script src="assets/js/script.js"></script>
+
 
 <!--Jquery CDN-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

@@ -19,3 +19,9 @@ function closeMenu() {
 //SIMPLE PARALLAX PLUGIN
 const parallaxImg = document.getElementsByClassName('parallax');
 new simpleParallax(parallaxImg);
+
+const gameplayImg = document.getElementsByClassName('gameImg');
+new simpleParallax(gameplayImg);
+
+//AOS INITIALIZATION
+AOS.init();
