@@ -42,10 +42,11 @@ h4 {
     font-size: clamp(20px, 2.5vw, 24px);
 }
 h1, h2, h3{
-    font-family: 'Reggae One', cursive;
+    font-family: 'Cinzel', serif;
     color: $primaryColor;
     -webkit-text-stroke: 0.1px $borderTextColor;
     text-transform: uppercase;
+    font-weight: 700;
 }
 a{
     text-decoration: none;
@@ -96,13 +97,15 @@ li{
     position: fixed;
     z-index: 99999999;
     width: 100%;
+    top: 0;
+    left: 0;
     background: linear-gradient(180deg, #02010A 0%, rgba(2, 1, 10, 0.78) 28.12%, rgba(2, 1, 10, 0.03) 100%);
 }
 .nav-logo {
     color: #fff;
     font-size: 18px;
     color: $secondaryColor;
-    font-family: 'Reggae One', cursive;
+    font-family: 'Cinzel', serif;
     -webkit-text-stroke: 0.1px $secondaryColor;
 }
 .hamburger{
@@ -121,7 +124,7 @@ li{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Reggae One', cursive;
+    font-family: 'Cinzel', serif;;
     margin-top: 12px;
 }
 .nav-item{
@@ -219,7 +222,14 @@ li{
     height: 50%;
     margin-top: 20px;
     // background: transparent;
-    width: 100%;
+    width: 100vw;
+}
+
+@media (min-width){
+    img.parallax{
+        object-fit: cover;
+        object-position: center;
+    }
 }
 
 @media (max-width: 1040px){
@@ -251,8 +261,8 @@ li{
         top: 80%;
     
         .logo-text{
-            margin-top: 48px;
-            max-width: 50px;
+            margin-top: -12px;
+            max-width: 300px;
             height: auto;
             
         }
@@ -495,7 +505,7 @@ li{
         h4{
             text-transform: uppercase;
             line-height: 1.2;
-            font-family: 'Reggae One', cursive;
+            font-family: 'Cinzel', serif;
             color: $primaryColor;
             margin-bottom: 12px;
         }
@@ -594,15 +604,130 @@ li{
     }
 }
 .roadmap-container{
-    width: 100%;
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    align-items: center;
+    /* The actual timeline (the vertical ruler) */
+    .timeline {
+        position: relative;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    
+    /* The actual timeline (the vertical ruler) */
+    .timeline::after {
+        content: '';
+        position: absolute;
+        width: 2px;
+        background-color: rgba(198, 162, 72, 1);;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -3px;
+    }
+    
+    /* Container around content */
+    .container {
+        padding: 10px 40px;
+        position: relative;
+        background-color: inherit;
+        width: 50%;
+    }
+    
+    /* The circles on the timeline */
+    .container::after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        right: -12px;
+        background-color: #20BFB7;
+        border: 4px solid #327572;
+        top: 15px;
+        border-radius: 50%;
+        z-index: 1;
+    }
+    
+    /* Place the container to the left */
+    .left {
+        left: 0;
+    }
+    
+    /* Place the container to the right */
+    .right {
+        left: 50%;
+    }
+    
+    /* Add arrows to the left container (pointing right) */
+    .left::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        right: 30px;
+        border: medium solid rgba(198, 162, 72, 1);;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent rgba(198, 162, 72, 1);;
+    }
+    
+    /* Add arrows to the right container (pointing left) */
+    .right::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        left: 30px;
+        border: medium solid rgba(198, 162, 72, 1);
+        border-width: 10px 10px 10px 0;
+        border-color: transparent rgba(198, 162, 72, 1) transparent transparent;
+    }
+    
+    /* Fix the circle for containers on the right side */
+    .right::after {
+        left: -16px;
+    }
+    
+    /* The actual content */
+    .item {
+        position: relative;
+    }
 }
-.owl-carousel .owl-item img{
-    width: unset;
+@media screen and (max-width: 600px) {
+    .roadmap-container{
+        /* Place the timelime to the left */
+        .timeline::after {
+            left: 31px;
+        }
+            
+        /* Full-width containers */
+        .container {
+            width: 100%;
+            padding-left: 70px;
+            padding-right: 25px;
+        }
+            
+        /* Make sure that all arrows are pointing leftwards */
+        .container::before {
+            left: 60px;
+            border: medium solid rgba(198, 162, 72, 1);
+            border-width: 10px 10px 10px 0;
+            border-color: transparent rgba(198, 162, 72, 1) transparent transparent;
+        }
+        
+        /* Make sure all circles are at the same spot */
+        .left::after, .right::after {
+            left: 15px;
+        }
+            
+        /* Make all right containers behave like the left ones */
+        .right {
+            left: 0%;
+        }
+    }
 }
+  
+
 .roadmap-wrapper{
     max-width: 380px;
     height: auto;
@@ -673,7 +798,7 @@ footer{
         flex: 1;
         padding: 24px;
         h4{
-            font-family: 'Reggae One', cursive;
+            font-family: 'Cinzel', serif;
             text-transform: uppercase;
             margin-bottom: 24px;
         }
@@ -735,7 +860,7 @@ footer{
         align-items: center;
     }
     img{
-        width: 300px;
+        max-width: 500px;
         height: auto;
         object-fit: cover;
         object-position: center;
@@ -745,12 +870,23 @@ footer{
         font-size: 48px;
         font-size: ViceCitySans !important;
     }
+    h4{
+        color: $secondaryColor;
+        margin-top: -8px;
+    }
     ul.splide__pagination{
         display: none;
     }
 }
 
-
+@media (max-width: 500px){
+    .character-container{
+        img{
+            max-width: 300px;
+            height: auto;
+        }
+    }
+}
 
 
 /*=======OVERVIEW PAGE STYLING======*/
