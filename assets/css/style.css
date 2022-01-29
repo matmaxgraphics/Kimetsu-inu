@@ -74,6 +74,54 @@ a {
           align-items: center;
 }
 
+.pushable {
+  background: #1b3752;
+  border: none;
+  border-radius: 12px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.pushable:hover .front {
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+}
+
+.pushable:active .front {
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+}
+
+.front {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 40px;
+  border-radius: 15px;
+  font-size: 18px;
+  background: linear-gradient(190deg, #00ffff 20%, #336699 100%);
+  color: white;
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+  will-change: transform;
+  -webkit-transition: -webkit-transform 250ms;
+  transition: -webkit-transform 250ms;
+  transition: transform 250ms;
+  transition: transform 250ms, -webkit-transform 250ms;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+}
+
+.pushable:focus:not(:focus-visible) {
+  outline: none;
+}
+
 p {
   font-size: 18px;
   color: #fff;
@@ -244,7 +292,7 @@ li {
 .available-img {
   width: 80%;
   margin: auto;
-  margin-bottom: 24px;
+  margin-bottom: 48px;
 }
 
 .details-container {
@@ -306,10 +354,10 @@ li {
           flex-direction: row;
 }
 .cta-container .cta-links .cta-icon {
-  font-size: 24px;
+  font-size: 32px;
   margin-right: 12px;
 }
-.cta-container .cta-links a {
+.cta-container .cta-links button.exception {
   margin-right: 24px;
 }
 
@@ -333,10 +381,16 @@ li {
     padding: 10px 30px;
     height: 48px;
   }
+
+  .front {
+    padding: 10px 30px;
+    border-radius: 12px;
+  }
 }
 @media only screen and (max-width: 400px) {
   .available-img {
     width: 90%;
+    margin-bottom: 24px;
   }
 }
 /*=======END OF HEADER SECTION STYLING======*/
@@ -351,7 +405,7 @@ li {
   background-size: cover;
   position: absolute;
   height: 100vh;
-  top: 120%;
+  top: 70%;
   left: 0;
   right: 0;
   z-index: -1;
@@ -439,7 +493,7 @@ li {
   }
   .overview-section .description-container {
     position: relative;
-    margin: 37% auto 0;
+    margin: 20% auto 0;
   }
   .overview-section .image-container {
     margin-top: -36px;

@@ -29,14 +29,11 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.11/dist/css/splide.min.css">
 
-    <!--SIMPLE PARALLAX PLUGIN-->
-    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
-
     <!--AOS CSS CDN-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!--AOS PLUGIN-->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!--OWL CAROUSEL CSS CDN-->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
@@ -86,7 +83,17 @@
                 <img src="assets/images/available.png" alt="available soon graphics" class="available-img">
                 <div class="cta-container">
                     <div class="cta-links">
-                        <a href="#" class="btn"> <i class="ri-apple-fill cta-icon"></i> iOS</a> <a href="#" class="btn"><i class="ri-android-fill cta-icon"></i> ANDROID</a>
+                        <button class="pushable exception">
+                            <span class="front">
+                                <i class="ri-apple-fill cta-icon"></i> iOS
+                            </span>
+                        </button>
+
+                        <button class="pushable">
+                            <span class="front">
+                                <i class="ri-android-fill cta-icon"></i> ANDROID
+                            </span>
+                        </button>
                     </div>
                 </div>
                 <!-- <h4>The story of $KINU is a role-playing game with three Shibas on a mission to rescue their abducted Shiba Puppy from the hand of a demon wolf</h4> -->
@@ -119,8 +126,8 @@
             <div class="image-container" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-quad">
                 <img src="assets/images/background.png" alt="image showing Shiba rescue mission" class="gameImg">
             </div>
-            <div class="description-container" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-quad">
-                <div class="gameplay-item">
+            <div class="description-container">
+                <div class="gameplay-item" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-quad">
                     <div class="img-icon">
                         <img src="assets/images/anime-char.png" alt="iconic image for anime character Kanata">
                     </div>
@@ -131,7 +138,7 @@
                     </div>
                 </div>
 
-                <div class="gameplay-item">
+                <div class="gameplay-item" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-quad">
                     <div class="img-icon">
                         <img src="assets/images/game-char.png" alt="iconic image for selecting game character">
                     </div>
@@ -142,7 +149,7 @@
                     </div>
                 </div>
 
-                <div class="gameplay-item">
+                <div class="gameplay-item" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-quad">
                     <div class="img-icon">
                         <img src="assets/images/prize-icon.png" alt="iconic image for prize winning">
                     </div>
@@ -152,7 +159,7 @@
                             leaderboard. </P>
                     </div>
                 </div>
-                <a href="gameplay.html" class="btn">More Details</a>
+                <a href="gameplay.html" class="btn" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-quad">More Details</a>
             </div>
         </main>
 
