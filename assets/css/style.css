@@ -208,6 +208,7 @@ li {
       -ms-flex-align: center;
           align-items: center;
   font-family: "Cinzel", serif;
+  font-weight: normal;
   margin-top: 12px;
 }
 
@@ -221,6 +222,10 @@ li {
 }
 .nav-link:hover {
   color: #20BFB7;
+}
+
+.nav-cta {
+  margin-top: 12px;
 }
 
 @media only screen and (max-width: 1040px) {
@@ -510,6 +515,41 @@ li {
   }
 }
 /*========END OF HOMEPAGE-OVERVIEW SECTION======*/
+/*.overview-section{
+    @include row-column;
+    padding: 24px;
+    .description-container{
+        @include column-description;
+        margin-right: 48px;
+        background-color: rgba(2, 1, 10, 0.5);
+        border: 2px solid $secondaryColor;
+        border-radius: 30px 0 0 0;
+        padding-right: unset;
+        h2{
+            background-color: linear-gradient(190deg, #00ffff 20%, #336699 100%);
+            padding: 12px;
+            border-radius: 30px 0 0 0;
+            width: 100%;
+        }
+        .explainer-paragraph{
+            padding: 24px;
+        }
+        p{
+            margin-bottom: 24px;
+            font-weight: 400;
+            text-align: center;
+        }
+    }
+    .image-container{
+        border-radius: 12px;
+        @include column-img;
+        img{
+            width: 100%;
+            height: auto;
+            border-radius: 12px
+        }
+    }
+}*/
 /*=========HOMEPAGE GAMEPLAY SECTION STYLING========*/
 .gameplay-section {
   margin-top: 96px;
