@@ -46,7 +46,7 @@ h1, h2, h3{
     color: $primaryColor;
     -webkit-text-stroke: 0.1px $borderTextColor;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 500;
 }
 a{
     text-decoration: none;
@@ -244,7 +244,7 @@ li{
     margin: auto;
     margin-bottom: 48px;
 }
-.details-container {
+.hero-details {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -301,7 +301,7 @@ li{
 }
 
 @media (max-width: 375px) {
-    .details-container {
+    .hero-details {
         top:40%;
     }
 }
@@ -334,39 +334,156 @@ li{
 
 
 /*=========OVERVIEW-HOMEPAGE-SECTION=======*/
-.overview-section{
-    height: auto;
-    // position: relative;
-    &::before{
-        content: '';
-        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(8, 7, 19, 0.4)), url('../images/bg-2.jpg') no-repeat center;
-        background-size: cover;
-        position: absolute;
-        height: 100vh;
-        top: 70%;
-        left: 0;
-        right: 0;
-        z-index: -1;
-        // bottom: 0;
-    }
+// .overview-section{
+//     height: auto;
+//     // position: relative;
+//     &::before{
+//         content: '';
+//         background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(8, 7, 19, 0.4)), url('../images/bg-2.jpg') no-repeat center;
+//         background-size: cover;
+//         position: absolute;
+//         height: 100vh;
+//         top: 70%;
+//         left: 0;
+//         right: 0;
+//         z-index: -1;
+//         // bottom: 0;
+//     }
     
+//     .description-container{
+//         display: flex;
+//         flex-direction: column;
+//         position: relative;
+//         width: 80%;
+//         margin: 5% auto 0;
+//         text-align: center;
+//         h2{
+//             margin-bottom: 24px;
+//             line-height: 1.2;
+//         }
+//         p{
+//             margin-bottom: 36px;
+//         }
+//         a.btn{
+//             width: max-content;
+//             margin: auto
+//         }
+//     }
+//     .image-container{
+//         background: url('../images/video-frame.png') no-repeat;
+//         background-size: contain;
+//         background-position: center;
+//         height: 450px;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         margin-top: 60px;
+//         video{
+//             width: fit-content;
+//             max-height: 310px;
+//             border-radius: 12px;
+//             margin-bottom: 36px;
+//         }
+//     }
+// }
+
+// @media (max-width: 872px){
+//     .overview-section{ 
+//         .image-container{
+//             margin-top: 60px;
+//         }
+//     }
+// }
+// @media (max-width: 720px){
+//     .overview-section{ 
+//         .image-container{
+//             width: 80%;
+//             margin: auto;
+//             height: 450px;
+//             video{
+//                 width: 80%;
+//                 max-height: 310px;
+//                 border-radius: 12px;
+//                 margin-bottom: 36px;
+//             }
+//         }
+//     }
+// }
+
+// @media (max-width: 630px){
+
+//     .overview-section{
+//         &::before{
+//             top: 60%;
+//         }
+//         .image-container{
+//             margin-top: -36px;
+//         }
+//     }
+// }
+// @media (max-width: 480px){
+//     .overview-section{
+//         &::before{
+//             top: 50%;
+//         }
+//         .description-container{
+//             position: relative;
+//             margin: 20% auto 0;
+
+//         }
+//         .image-container{
+//             margin-top: -36px;
+//         }
+//     }
+// }
+// @media (max-width: 375px){
+//     .overview-section{ 
+//         .image-container{
+//             width: 90%;
+//             margin: auto;
+//             margin-top: -60px;
+//             video{
+//                 width: 90%;
+//             }
+//         }
+//     }
+// }
+/*========END OF HOMEPAGE-OVERVIEW SECTION======*/
+
+.overview-section{
+    @include row-column;
+    margin-top: unset;
+    justify-content: center;
+    background: url('../images/overview-bg.png') no-repeat center;
+    background-size: cover;
+    height: auto;
+    padding: 24px;
     .description-container{
-        display: flex;
-        flex-direction: column;
+        @include column-description;
+        margin-right: 48px;
+        background-color: rgba(2, 1, 10, 0.6);
         position: relative;
-        width: 80%;
-        margin: 5% auto 0;
-        text-align: center;
+        padding-right: unset;
+        height: auto;
+        clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
+
         h2{
-            margin-bottom: 24px;
-            line-height: 1.2;
+            background-color: $secondaryColor;
+            padding: 12px;
+            width: 100%;
+            text-align: center;
+        }
+        .explainer-paragraph{
+            padding: 12px 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
         p{
-            margin-bottom: 36px;
-        }
-        a.btn{
-            width: max-content;
-            margin: auto
+            margin-bottom: 24px;
+            font-weight: 400;
+            text-align: center;
         }
     }
     .image-container{
@@ -380,111 +497,40 @@ li{
         margin-top: 60px;
         video{
             width: fit-content;
-            max-height: 310px;
+            max-height: 340px;
             border-radius: 12px;
             margin-bottom: 36px;
         }
     }
 }
 
-@media (max-width: 872px){
-    .overview-section{ 
-        .image-container{
-            margin-top: 60px;
+@media only screen and (max-width: 700px){
+	.overview-section{
+        @include responsive;
+        margin-top: 12px;
+        .description-container, .image-container{
+            width: 100%;
+            padding-right: unset;
         }
-    }
-}
-@media (max-width: 720px){
-    .overview-section{ 
+        
+        .description-container{
+            margin-top: 48px;
+            margin-left: unset;
+        }
         .image-container{
-            width: 80%;
+            width: 100%;
             margin: auto;
             height: 450px;
             video{
-                width: 80%;
+                width: 90%;
                 max-height: 310px;
                 border-radius: 12px;
-                margin-bottom: 36px;
             }
         }
-    }
-}
 
-@media (max-width: 630px){
-
-    .overview-section{
-        &::before{
-            top: 60%;
-        }
-        .image-container{
-            margin-top: -36px;
-        }
     }
+    
 }
-@media (max-width: 480px){
-    .overview-section{
-        &::before{
-            top: 50%;
-        }
-        .description-container{
-            position: relative;
-            margin: 20% auto 0;
-
-        }
-        .image-container{
-            margin-top: -36px;
-        }
-    }
-}
-@media (max-width: 375px){
-    .overview-section{ 
-        .image-container{
-            width: 90%;
-            margin: auto;
-            margin-top: -60px;
-            video{
-                width: 90%;
-            }
-        }
-    }
-}
-/*========END OF HOMEPAGE-OVERVIEW SECTION======*/
-
-/*.overview-section{
-    @include row-column;
-    padding: 24px;
-    .description-container{
-        @include column-description;
-        margin-right: 48px;
-        background-color: rgba(2, 1, 10, 0.5);
-        border: 2px solid $secondaryColor;
-        border-radius: 30px 0 0 0;
-        padding-right: unset;
-        h2{
-            background-color: linear-gradient(190deg, #00ffff 20%, #336699 100%);
-            padding: 12px;
-            border-radius: 30px 0 0 0;
-            width: 100%;
-        }
-        .explainer-paragraph{
-            padding: 24px;
-        }
-        p{
-            margin-bottom: 24px;
-            font-weight: 400;
-            text-align: center;
-        }
-    }
-    .image-container{
-        border-radius: 12px;
-        @include column-img;
-        img{
-            width: 100%;
-            height: auto;
-            border-radius: 12px
-        }
-    }
-}*/
 
 /*=========HOMEPAGE GAMEPLAY SECTION STYLING========*/
 .gameplay-section{
@@ -560,9 +606,6 @@ li{
             }
         }
     }
-    
-}
-@media only screen and (max-width: 768px) {
     
 }
 @media only screen and (max-width: 700px){
@@ -929,7 +972,7 @@ footer{
 /*=======OVERVIEW PAGE STYLING======*/
 .page-wrapper{
     padding: 0 36px;
-    margin-top: 24px;
+    margin-top: 60px;
 }
 @media only screen and (max-width: 700px) {
     .page-wrapper{

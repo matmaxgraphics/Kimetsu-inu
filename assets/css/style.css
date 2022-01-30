@@ -21,7 +21,7 @@ html {
 }
 
 body {
-  background-color: #02010A;
+  background-color: #02010a;
   max-width: 1440px;
   margin: auto;
   color: #fff;
@@ -45,7 +45,7 @@ h1, h2, h3 {
   color: #FD5200;
   -webkit-text-stroke: 0.1px #FFB800;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 a {
@@ -230,7 +230,7 @@ li {
 
 @media only screen and (max-width: 1040px) {
   .navbar {
-    background-color: #02010A;
+    background-color: #02010a;
     position: fixed;
     top: 0;
     width: 100%;
@@ -246,7 +246,7 @@ li {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    background-color: #02010A;
+    background-color: #02010a;
     width: 100%;
     border-radius: 10px;
     text-align: center;
@@ -300,7 +300,7 @@ li {
   margin-bottom: 48px;
 }
 
-.details-container {
+.hero-details {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -319,7 +319,7 @@ li {
   position: absolute;
   top: 50%;
 }
-.details-container .logo-text {
+.hero-details .logo-text {
   max-width: 550px;
   height: auto;
 }
@@ -377,7 +377,7 @@ li {
   }
 }
 @media (max-width: 375px) {
-  .details-container {
+  .hero-details {
     top: 40%;
   }
 }
@@ -400,46 +400,77 @@ li {
 }
 /*=======END OF HEADER SECTION STYLING======*/
 /*=========OVERVIEW-HOMEPAGE-SECTION=======*/
+/*========END OF HOMEPAGE-OVERVIEW SECTION======*/
 .overview-section {
-  height: auto;
-}
-.overview-section::before {
-  content: "";
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(8, 7, 19, 0.4))), url("../images/bg-2.jpg") no-repeat center;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(8, 7, 19, 0.4)), url("../images/bg-2.jpg") no-repeat center;
-  background-size: cover;
-  position: absolute;
-  height: 100vh;
-  top: 70%;
-  left: 0;
-  right: 0;
-  z-index: -1;
-}
-.overview-section .description-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 10px 24px;
+  width: 100%;
+  margin-top: 96px;
+  margin-top: unset;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: url("../images/overview-bg.png") no-repeat center;
+  background-size: cover;
+  height: auto;
+  padding: 24px;
+}
+.overview-section h2 {
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+.overview-section .description-container {
+  padding-right: 24px;
+}
+.overview-section .description-container {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+  margin-right: 48px;
+  background-color: rgba(2, 1, 10, 0.6);
   position: relative;
-  width: 80%;
-  margin: 5% auto 0;
-  text-align: center;
+  padding-right: unset;
+  height: auto;
+  -webkit-clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
+          clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
 }
 .overview-section .description-container h2 {
-  margin-bottom: 24px;
-  line-height: 1.2;
+  background-color: #20BFB7;
+  padding: 12px;
+  width: 100%;
+  text-align: center;
+}
+.overview-section .description-container .explainer-paragraph {
+  padding: 12px 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .overview-section .description-container p {
-  margin-bottom: 36px;
-}
-.overview-section .description-container a.btn {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  margin: auto;
+  margin-bottom: 24px;
+  font-weight: 400;
+  text-align: center;
 }
 .overview-section .image-container {
   background: url("../images/video-frame.png") no-repeat;
@@ -461,95 +492,39 @@ li {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  max-height: 310px;
+  max-height: 340px;
   border-radius: 12px;
   margin-bottom: 36px;
 }
 
-@media (max-width: 872px) {
-  .overview-section .image-container {
-    margin-top: 60px;
+@media only screen and (max-width: 700px) {
+  .overview-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    margin-top: 12px;
   }
-}
-@media (max-width: 720px) {
+  .overview-section .description-container, .overview-section .image-container {
+    width: 100%;
+    padding-right: unset;
+  }
+  .overview-section .description-container {
+    margin-top: 48px;
+    margin-left: unset;
+  }
   .overview-section .image-container {
-    width: 80%;
+    width: 100%;
     margin: auto;
     height: 450px;
   }
   .overview-section .image-container video {
-    width: 80%;
+    width: 90%;
     max-height: 310px;
     border-radius: 12px;
-    margin-bottom: 36px;
   }
 }
-@media (max-width: 630px) {
-  .overview-section::before {
-    top: 60%;
-  }
-  .overview-section .image-container {
-    margin-top: -36px;
-  }
-}
-@media (max-width: 480px) {
-  .overview-section::before {
-    top: 50%;
-  }
-  .overview-section .description-container {
-    position: relative;
-    margin: 20% auto 0;
-  }
-  .overview-section .image-container {
-    margin-top: -36px;
-  }
-}
-@media (max-width: 375px) {
-  .overview-section .image-container {
-    width: 90%;
-    margin: auto;
-    margin-top: -60px;
-  }
-  .overview-section .image-container video {
-    width: 90%;
-  }
-}
-/*========END OF HOMEPAGE-OVERVIEW SECTION======*/
-/*.overview-section{
-    @include row-column;
-    padding: 24px;
-    .description-container{
-        @include column-description;
-        margin-right: 48px;
-        background-color: rgba(2, 1, 10, 0.5);
-        border: 2px solid $secondaryColor;
-        border-radius: 30px 0 0 0;
-        padding-right: unset;
-        h2{
-            background-color: linear-gradient(190deg, #00ffff 20%, #336699 100%);
-            padding: 12px;
-            border-radius: 30px 0 0 0;
-            width: 100%;
-        }
-        .explainer-paragraph{
-            padding: 24px;
-        }
-        p{
-            margin-bottom: 24px;
-            font-weight: 400;
-            text-align: center;
-        }
-    }
-    .image-container{
-        border-radius: 12px;
-        @include column-img;
-        img{
-            width: 100%;
-            height: auto;
-            border-radius: 12px
-        }
-    }
-}*/
 /*=========HOMEPAGE GAMEPLAY SECTION STYLING========*/
 .gameplay-section {
   margin-top: 96px;
@@ -834,7 +809,7 @@ li {
 .roadmap-wrapper {
   max-width: 380px;
   height: auto;
-  background-color: #02010A;
+  background-color: #02010a;
   border: 1px solid #c6a248;
   border-radius: 12px;
   padding: 12px;
@@ -1034,7 +1009,7 @@ footer {
 /*=======OVERVIEW PAGE STYLING======*/
 .page-wrapper {
   padding: 0 36px;
-  margin-top: 24px;
+  margin-top: 60px;
 }
 
 @media only screen and (max-width: 700px) {
