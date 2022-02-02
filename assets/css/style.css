@@ -12,6 +12,12 @@ html {
   font-family: ViceCitySans;
   src: url(../fonts/ViceCitySans.otf);
 }
+@font-face {
+  font-family: "Conthrax";
+  font-style: normal;
+  font-weight: normal;
+  src: url(../fonts/conthrax-sb.ttf);
+}
 /*General styling*/
 * {
   -webkit-box-sizing: border-box;
@@ -488,6 +494,7 @@ li {
 .overview-section .description-container .overview-text .initial-h2 {
   font-family: "Conthrax", sans-serif;
   background: linear-gradient(9deg, aqua 7%, white 80%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: unset;
@@ -574,6 +581,14 @@ li {
     border-radius: 12px;
   }
 }
+@media (max-width: 470px) {
+  .overview-section .description-container .overview-text {
+    padding: 24px;
+  }
+  .overview-section .description-container .overview-text .pre-h2 {
+    top: 26px;
+  }
+}
 /*=========HOMEPAGE GAMEPLAY SECTION STYLING========*/
 .gameplay-section {
   margin-top: 96px;
@@ -621,7 +636,7 @@ li {
   width: 50%;
   margin-left: 48px;
 }
-.gameplay-section .description-container .btn {
+.gameplay-section .description-container .gameplay-btn {
   float: right;
 }
 .gameplay-section .description-container .gameplay-item {
@@ -698,12 +713,18 @@ li {
   }
 }
 @media only screen and (max-width: 400px) {
-  .gameplay-section {
-    margin-top: unset;
-  }
-  .gameplay-section .description-container .btn {
+  .gameplay-section .description-container .gameplay-btn {
     float: unset;
-    margin-left: auto;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .gameplay-section .description-container .front-padding {
+    padding: 15px 30px;
   }
   .gameplay-section .gameplay-wrapper .gameplay-item {
     display: -webkit-box;
