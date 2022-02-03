@@ -32,6 +32,7 @@ body {
   margin: auto;
   color: #fff;
   font-family: "Rubik", sans-serif;
+  width: 100%;
 }
 
 h1 {
@@ -438,7 +439,8 @@ li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: url("../images/overview-bg.png") no-repeat center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url("../images/bg-3.jpg") no-repeat center;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/bg-3.jpg") no-repeat center;
   background-size: cover;
   height: auto;
   padding: 24px;
@@ -539,15 +541,12 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 60px;
 }
 .overview-section .image-container video {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  max-height: 340px;
-  border-radius: 12px;
-  margin-bottom: 36px;
+  max-height: 330px;
 }
 
 @media only screen and (max-width: 700px) {
@@ -576,9 +575,8 @@ li {
     height: 450px;
   }
   .overview-section .image-container video {
-    width: 90%;
+    width: 80%;
     max-height: 310px;
-    border-radius: 12px;
   }
 }
 @media (max-width: 470px) {
@@ -776,6 +774,10 @@ li {
       -ms-grid-row-align: center;
       align-self: center;
   margin-bottom: 24px;
+}
+.gameplay-item img.gif-img {
+  width: 80%;
+  height: auto;
 }
 .gameplay-item h4 {
   margin-bottom: 12px;
