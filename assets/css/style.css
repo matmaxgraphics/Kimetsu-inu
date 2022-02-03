@@ -596,163 +596,195 @@ li {
 .gameplay-section h2 {
   text-align: center;
 }
-.gameplay-section .gameplay-wrapper {
+.gameplay-section a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  padding: 10px 24px;
-  width: 100%;
-  margin-top: 96px;
-  margin-top: 48px;
-}
-.gameplay-section .gameplay-wrapper h2 {
-  line-height: 1.2;
-  margin-bottom: 24px;
-}
-.gameplay-section .gameplay-wrapper .description-container {
-  padding-right: 24px;
-}
-.gameplay-section .image-container {
-  border-radius: 12px;
-  width: 50%;
-}
-.gameplay-section .image-container img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-}
-.gameplay-section .description-container {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 50%;
-  margin-left: 48px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 48px;
 }
-.gameplay-section .description-container .gameplay-btn {
-  float: right;
+
+.gameplay-wrapper {
+  margin-top: 48px;
 }
-.gameplay-section .description-container .gameplay-item {
+.gameplay-wrapper .container {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 24px;
+  place-items: center;
+}
+
+/*.image-container{
+    border-radius: 12px;
+    @include column-img;
+    img{
+        width: 100%;
+        height: auto;
+        border-radius: 12px
+    }
+}
+.description-container{
+    @include column-description;
+    margin-left: 48px;
+    .gameplay-btn{
+        float: right;
+    }
+    .gameplay-item{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 48px;
+        width: 100%;
+        .img-icon{
+            width: 20%;
+            height: auto;
+            margin-right: 24px;
+            img{
+                width: 80%;
+            }
+        }
+
+        .text-description{
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+        }
+    }
+    h4{
+        text-transform: uppercase;
+        line-height: 1.2;
+        font-family: 'Cinzel', serif;
+        color: $primaryColor;
+        margin-bottom: 12px;
+    }
+}
+}
+
+/*@media only screen and (max-width: 900px){
+.gameplay-section{
+    .description-container{
+        .gameplay-item{
+            .img-icon{
+                width: 30%;
+                height: auto;
+                margin-right: 12px;
+                img{
+                    width: 100%;
+                }
+            }
+
+            .text-description{
+                width: 70%;
+            }
+        }
+    }
+}
+
+}
+@media only screen and (max-width: 700px){
+.gameplay-section{
+    .gameplay-wrapper{
+        @include responsive;
+        margin-top: 24px;
+
+        .description-container, .image-container{
+            width: 100%;
+            padding-right: unset;
+        }
+    }
+    .description-container{
+        margin-top: 48px;
+        margin-left: unset;
+        .gameplay-item{
+            .img-icon{
+                width: 20%;
+                height: auto;
+                margin-right: 24px;
+            }
+        }
+    }
+
+}
+
+}
+
+
+@media only screen and (max-width: 400px){
+.gameplay-section{
+    .description-container{
+        .gameplay-btn{
+           float: unset;
+           margin: auto;
+           display: flex;
+           justify-content: center;
+        }
+        .front-padding{
+            padding: 15px 30px;
+        }
+    }
+    .gameplay-wrapper{
+        .gameplay-item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            text-align: center;
+            .img-icon{
+                width: 30%;
+                height: auto;
+                margin-bottom: 12px;
+                img{
+                    max-width: 80%;
+                    height: auto;
+                }
+            }
+
+            .text-description{
+                width: 100%;
+            }
+        }
+    }
+}*/
+.gameplay-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  margin-bottom: 48px;
-  width: 100%;
-}
-.gameplay-section .description-container .gameplay-item .img-icon {
-  width: 20%;
-  height: auto;
-  margin-right: 24px;
-}
-.gameplay-section .description-container .gameplay-item .img-icon img {
-  width: 80%;
-}
-.gameplay-section .description-container .gameplay-item .text-description {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 80%;
+  background-color: rgba(2, 1, 10, 0.8);
+  border: 2px solid #20BFB7;
+  max-width: 350px;
+  padding: 12px;
+  height: 400px;
+  text-align: center;
 }
-.gameplay-section .description-container h4 {
+.gameplay-item .img-icon {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-bottom: 24px;
+}
+.gameplay-item h4 {
+  margin-bottom: 12px;
   text-transform: uppercase;
   line-height: 1.2;
   font-family: "Cinzel", serif;
   color: #FD5200;
-  margin-bottom: 12px;
 }
 
-@media only screen and (max-width: 900px) {
-  .gameplay-section .description-container .gameplay-item .img-icon {
-    width: 30%;
-    height: auto;
-    margin-right: 12px;
-  }
-  .gameplay-section .description-container .gameplay-item .img-icon img {
-    width: 100%;
-  }
-  .gameplay-section .description-container .gameplay-item .text-description {
-    width: 70%;
-  }
-}
-@media only screen and (max-width: 700px) {
-  .gameplay-section .gameplay-wrapper {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 100%;
-    margin-top: 24px;
-  }
-  .gameplay-section .gameplay-wrapper .description-container, .gameplay-section .gameplay-wrapper .image-container {
-    width: 100%;
-    padding-right: unset;
-  }
-  .gameplay-section .description-container {
-    margin-top: 48px;
-    margin-left: unset;
-  }
-  .gameplay-section .description-container .gameplay-item .img-icon {
-    width: 20%;
-    height: auto;
-    margin-right: 24px;
-  }
-}
-@media only screen and (max-width: 400px) {
-  .gameplay-section .description-container .gameplay-btn {
-    float: unset;
-    margin: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .gameplay-section .description-container .front-padding {
-    padding: 15px 30px;
-  }
-  .gameplay-section .gameplay-wrapper .gameplay-item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 100%;
-    text-align: center;
-  }
-  .gameplay-section .gameplay-wrapper .gameplay-item .img-icon {
-    width: 30%;
-    height: auto;
-    margin-bottom: 12px;
-  }
-  .gameplay-section .gameplay-wrapper .gameplay-item .img-icon img {
-    max-width: 80%;
-    height: auto;
-  }
-  .gameplay-section .gameplay-wrapper .gameplay-item .text-description {
-    width: 100%;
-  }
-}
 /*=========END OF HOMEPAGE GAMEPLAY SECTION STYLING========*/
 /*==========ROAADMAP SECTION STYLING========*/
 .roadmap-section {

@@ -495,141 +495,180 @@ li{
     h2{
         text-align: center;
     }
-    .gameplay-wrapper{
-        @include row-column;
+    a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin-top: 48px;
     }
-    .image-container{
-        border-radius: 12px;
-        @include column-img;
-        img{
-            width: 100%;
+}
+
+
+.gameplay-wrapper{
+    margin-top: 48px;
+    .container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        gap: 24px;
+        place-items: center;
+    }
+    
+}
+
+/*.image-container{
+    border-radius: 12px;
+    @include column-img;
+    img{
+        width: 100%;
+        height: auto;
+        border-radius: 12px
+    }
+}
+.description-container{
+    @include column-description;
+    margin-left: 48px;
+    .gameplay-btn{
+        float: right;
+    }
+    .gameplay-item{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 48px;
+        width: 100%;
+        .img-icon{
+            width: 20%;
             height: auto;
-            border-radius: 12px
+            margin-right: 24px;
+            img{
+                width: 80%;
+            }
+        }
+        
+        .text-description{
+            display: flex;
+            flex-direction: column;
+            width: 80%;
         }
     }
+    h4{
+        text-transform: uppercase;
+        line-height: 1.2;
+        font-family: 'Cinzel', serif;
+        color: $primaryColor;
+        margin-bottom: 12px;
+    }
+}
+}
+
+/*@media only screen and (max-width: 900px){
+.gameplay-section{
     .description-container{
-        @include column-description;
-        margin-left: 48px;
-        .gameplay-btn{
-            float: right;
-        }
         .gameplay-item{
-            display: flex;
-            flex-direction: row;
-            margin-bottom: 48px;
-            width: 100%;
             .img-icon{
-                width: 20%;
+                width: 30%;
                 height: auto;
-                margin-right: 24px;
+                margin-right: 12px;
                 img{
-                    width: 80%;
+                    width: 100%;
                 }
             }
             
             .text-description{
-                display: flex;
-                flex-direction: column;
-                width: 80%;
+                width: 70%;
             }
-        }
-        h4{
-            text-transform: uppercase;
-            line-height: 1.2;
-            font-family: 'Cinzel', serif;
-            color: $primaryColor;
-            margin-bottom: 12px;
         }
     }
 }
 
-@media only screen and (max-width: 900px){
-	.gameplay-section{
-        .description-container{
-            .gameplay-item{
-                .img-icon{
-                    width: 30%;
-                    height: auto;
-                    margin-right: 12px;
-                    img{
-                        width: 100%;
-                    }
-                }
-                
-                .text-description{
-                    width: 70%;
-                }
-            }
-        }
-    }
-    
 }
 @media only screen and (max-width: 700px){
-	.gameplay-section{
-        .gameplay-wrapper{
-            @include responsive;
-            margin-top: 24px;
-    
-            .description-container, .image-container{
-                width: 100%;
-                padding-right: unset;
-            }
-        }
-        .description-container{
-            margin-top: 48px;
-            margin-left: unset;
-            .gameplay-item{
-                .img-icon{
-                    width: 20%;
-                    height: auto;
-                    margin-right: 24px;
-                }
-            }
-        }
+.gameplay-section{
+    .gameplay-wrapper{
+        @include responsive;
+        margin-top: 24px;
 
+        .description-container, .image-container{
+            width: 100%;
+            padding-right: unset;
+        }
     }
-    
+    .description-container{
+        margin-top: 48px;
+        margin-left: unset;
+        .gameplay-item{
+            .img-icon{
+                width: 20%;
+                height: auto;
+                margin-right: 24px;
+            }
+        }
+    }
+
+}
+
 }
 
 
 @media only screen and (max-width: 400px){
-	.gameplay-section{
-        .description-container{
-            .gameplay-btn{
-               float: unset;
-               margin: auto;
-               display: flex;
-               justify-content: center;
-            }
-            .front-padding{
-                padding: 15px 30px;
-            }
+.gameplay-section{
+    .description-container{
+        .gameplay-btn{
+           float: unset;
+           margin: auto;
+           display: flex;
+           justify-content: center;
         }
-        .gameplay-wrapper{
-            .gameplay-item{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                width: 100%;
-                text-align: center;
-                .img-icon{
-                    width: 30%;
+        .front-padding{
+            padding: 15px 30px;
+        }
+    }
+    .gameplay-wrapper{
+        .gameplay-item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            text-align: center;
+            .img-icon{
+                width: 30%;
+                height: auto;
+                margin-bottom: 12px;
+                img{
+                    max-width: 80%;
                     height: auto;
-                    margin-bottom: 12px;
-                    img{
-                        max-width: 80%;
-                        height: auto;
-                    }
                 }
-                
-                .text-description{
-                    width: 100%;
-                }
+            }
+            
+            .text-description{
+                width: 100%;
             }
         }
     }
-    
+}*/
+.gameplay-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(2, 1, 10, 0.8);
+    border: 2px solid $secondaryColor;
+    max-width: 350px;
+    padding: 12px;
+    height: 400px;
+    text-align: center;
+    // clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%, 0 20%);
+    .img-icon{
+        align-self: center;
+        margin-bottom: 24px;
+    }
+
+    h4{
+        margin-bottom: 12px;
+        text-transform: uppercase;
+        line-height: 1.2;
+        font-family: 'Cinzel', serif;
+        color: $primaryColor;
+    }
 }
 /*=========END OF HOMEPAGE GAMEPLAY SECTION STYLING========*/
 
