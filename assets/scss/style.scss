@@ -243,7 +243,6 @@ li{
 
 /*=======HEADER SECTION STYLING======*/
 .header-section{
-    // background: transparent url('../images/background-new.png') no-repeat center;
     background-size: cover;
     max-width: 1440px;
     margin: auto;
@@ -274,7 +273,6 @@ li{
     position: relative;
     height: 50%;
     margin-top: 20px;
-    // background: transparent;
     width: 100vw;
 }
 .cta-container{
@@ -363,13 +361,11 @@ li{
 
 /*=========OVERVIEW-HOMEPAGE-SECTION=======*/
 
-/*========END OF HOMEPAGE-OVERVIEW SECTION======*/
-
 .overview-section{
     @include row-column;
     margin-top: unset;
     justify-content: center;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../images/bg-3.jpg') no-repeat center;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('../images/bg-3.jpg') no-repeat center;
     background-size: cover;
     height: auto;
     padding: 24px;
@@ -404,7 +400,6 @@ li{
                 background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
-                // text-shadow: 0 6px 6px $bgColor;
                 margin-bottom: unset;
                 position: relative;
                 z-index: 1;
@@ -436,7 +431,6 @@ li{
         display: flex;
         justify-content: center;
         align-items: center;
-        // margin-top: 60px;
         video{
             width: fit-content;
             max-height: 330px;
@@ -444,7 +438,7 @@ li{
     }
 }
 
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 800px){
 	.overview-section{
         @include responsive;
         margin-top: 12px;
@@ -486,6 +480,8 @@ li{
         }
     }   
 }
+/*========END OF HOMEPAGE-OVERVIEW SECTION======*/
+
 
 /*=========HOMEPAGE GAMEPLAY SECTION STYLING========*/
 .gameplay-section{
@@ -506,7 +502,7 @@ li{
     margin-top: 48px;
     .container{
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 24px;
         place-items: center;
     }
@@ -652,15 +648,18 @@ li{
     border: 2px solid $secondaryColor;
     max-width: 350px;
     padding: 12px;
-    height: 400px;
+    height: 480px;
     text-align: center;
-    // clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%, 0 20%);
     .img-icon{
         align-self: center;
         margin-bottom: 24px;
     }
     img.gif-img{
         width: 80%;
+        height: auto;
+    }
+    img.kinu-img{
+        width: 60%;
         height: auto;
     }
 
@@ -670,6 +669,15 @@ li{
         line-height: 1.2;
         font-family: 'Cinzel', serif;
         color: $primaryColor;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .gameplay-section{
+        .front {
+            padding: 10px 30px;
+            border-radius: 12px;
+        }
     }
 }
 /*=========END OF HOMEPAGE GAMEPLAY SECTION STYLING========*/
@@ -698,7 +706,7 @@ li{
         content: '';
         position: absolute;
         width: 2px;
-        background-color: rgba(198, 162, 72, 1);;
+        background-color: rgb(0, 255, 255);;
         top: 0;
         bottom: 0;
         left: 50%;
@@ -746,7 +754,7 @@ li{
         width: 0;
         z-index: 1;
         right: 30px;
-        border: medium solid rgba(198, 162, 72, 1);;
+        border: medium solid rgb(25, 196, 196);
         border-width: 10px 0 10px 10px;
         border-color: transparent transparent transparent rgba(198, 162, 72, 1);;
     }
@@ -760,9 +768,9 @@ li{
         width: 0;
         z-index: 1;
         left: 30px;
-        border: medium solid rgba(198, 162, 72, 1);
+        border: medium solid rgb(25, 196, 196);
         border-width: 10px 10px 10px 0;
-        border-color: transparent rgba(198, 162, 72, 1) transparent transparent;
+        border-color: transparent rgb(25, 196, 196) transparent transparent;
     }
     
     /* Fix the circle for containers on the right side */
@@ -792,9 +800,9 @@ li{
         /* Make sure that all arrows are pointing leftwards */
         .container::before {
             left: 60px;
-            border: medium solid rgba(198, 162, 72, 1);
+            border: medium solid rgb(25, 196, 196);
             border-width: 10px 10px 10px 0;
-            border-color: transparent rgba(198, 162, 72, 1) transparent transparent;
+            border-color: transparent rgb(25, 196, 196) transparent transparent;
         }
         
         /* Make sure all circles are at the same spot */
@@ -850,6 +858,8 @@ li{
         }
     }
 }
+
+
 .kinuverse-section{
     padding: 0 15px;
 }
@@ -1197,7 +1207,7 @@ footer{
         .detail{
             display: flex;
             // justify-content: center;
-            border-bottom: 1px solid #2E281C;
+            border-bottom: 1px solid rgba(0, 255, 255, 0.247);;
             margin-bottom: 12px;
             padding: 8px;
             .aside{
