@@ -405,7 +405,7 @@ img.mobile {
   }
 
   .hero-details {
-    top: 30%;
+    top: 55%;
     padding: 12px;
   }
   .hero-details .available-img {
@@ -977,9 +977,25 @@ img.mobile {
           align-items: center;
   margin: 24px 0;
 }
-.roadmap-wrapper img {
+.roadmap-wrapper .roadmap-ring {
   width: 100px !important;
-  height: auto;
+  border-radius: 50%;
+  background-color: #02010a;
+  border: 5px solid #20BFB7;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.roadmap-wrapper .headind-exception {
+  font-size: 48px !important;
+  color: #20BFB7;
 }
 .roadmap-wrapper .roadmap-item {
   margin-top: 48px;
@@ -1031,6 +1047,11 @@ img.mobile {
 }
 .kinuverse-wrapper h2 {
   margin-bottom: 24px;
+  font-weight: 500;
+  font-size: 48px;
+}
+.kinuverse-wrapper .front {
+  padding: 15px 30px;
 }
 
 /*======FOOTER SECTION STYLING=====*/
@@ -1150,6 +1171,21 @@ footer {
 .character-container ul.splide__pagination {
   display: none;
 }
+.character-container .character-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 
 @media (max-width: 500px) {
   .character-container img {
@@ -1184,6 +1220,7 @@ footer {
 }
 .overview-banner__container .details-container h1 {
   margin-top: 150px;
+  font-weight: 700;
 }
 
 /*------INTRO SECTION WRAPPER-----*/
@@ -1253,6 +1290,7 @@ footer {
 }
 .team-banner__container .details-container h1 {
   margin-top: 150px;
+  font-weight: 700;
 }
 
 .team-section {
@@ -1420,6 +1458,7 @@ footer {
 .token-banner__container .details-container h1 {
   margin-top: 150px;
   text-align: center;
+  font-weight: 700;
 }
 
 .token-section {
@@ -1542,6 +1581,7 @@ footer {
   max-width: 600px;
   margin: 145px auto 0;
   line-height: 1.2;
+  font-weight: 700;
 }
 
 .nft-section {

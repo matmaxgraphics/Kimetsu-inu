@@ -328,7 +328,7 @@ img.mobile{
         display: block;
     }
     .hero-details{
-        top: 30%;
+        top: 55%;
         padding: 12px;
         .available-img{
             width: 100%;
@@ -871,9 +871,20 @@ img.mobile{
         align-items: center;
         margin: 24px 0;
     }
-    img{
+    .roadmap-ring{
         width: 100px !important;
-        height: auto;
+        border-radius: 50%;
+        background-color: rgb(2, 1, 10);
+        border: 5px solid $secondaryColor;
+        // padding: 12px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .headind-exception{
+        font-size: 48px !important;
+        color: $secondaryColor;
     }
 
     .roadmap-item{
@@ -913,6 +924,11 @@ img.mobile{
     align-items: center;
     h2{
         margin-bottom: 24px;
+        font-weight: 500;
+        font-size: 48px;
+    }
+    .front{
+        padding: 15px 30px;
     }
 }
 
@@ -1009,6 +1025,13 @@ footer{
     ul.splide__pagination{
         display: none;
     }
+
+    .character-details{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 @media (max-width: 500px){
@@ -1041,6 +1064,7 @@ footer{
         justify-content: center;
         h1{
             margin-top: 150px;
+            font-weight: 700;
         }
     }
 }
@@ -1100,6 +1124,7 @@ footer{
         justify-content: center;
         h1{
             margin-top: 150px;
+            font-weight: 700;
         }
     }
 }
@@ -1216,6 +1241,7 @@ footer{
         h1{
             margin-top: 150px;
             text-align: center;
+            font-weight: 700;
         }
     }
 }
@@ -1321,6 +1347,7 @@ footer{
             max-width: 600px;
             margin: 145px auto 0;
             line-height: 1.2;
+            font-weight: 700;
         }
     }
 }
