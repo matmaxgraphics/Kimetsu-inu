@@ -27,7 +27,7 @@ html {
 }
 
 body {
-  background-color: #02010a;
+  background-color: #241b05;
   max-width: 1440px;
   margin: auto;
   color: #fff;
@@ -50,13 +50,16 @@ h4 {
 h1, h2, h3 {
   font-family: "Cinzel", serif;
   color: #FD5200;
-  -webkit-text-stroke: 0.1px #20BFB7;
   text-transform: uppercase;
   font-weight: 500;
 }
 
 a {
   text-decoration: none;
+  color: #fff;
+}
+
+button {
   color: #fff;
 }
 
@@ -252,7 +255,7 @@ li {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    background-color: #02010a;
+    background-color: #241b05;
     width: 100%;
     border-radius: 10px;
     text-align: center;
@@ -277,7 +280,7 @@ li {
     cursor: pointer;
   }
   .hamburger img {
-    width: 48px;
+    width: 50px;
     height: auto;
   }
 
@@ -334,7 +337,6 @@ li {
 .hero-img {
   position: relative;
   height: 50%;
-  margin-top: 20px;
   width: 100%;
 }
 
@@ -377,11 +379,6 @@ img.mobile {
   margin-right: 24px;
 }
 
-@media (max-width: 1040px) {
-  .hero-img {
-    margin-top: 20%;
-  }
-}
 @media only screen and (max-width: 940px) {
   .hero-img {
     height: 60%;
@@ -498,6 +495,11 @@ img.mobile {
 .overview-section .image-container {
   width: 50%;
 }
+.overview-section .image-container h2 {
+  position: relative;
+  text-align: center;
+  top: 20%;
+}
 .overview-section .image-container .video-container {
   background: url("../images/video-frame.png") no-repeat center;
   background-size: contain;
@@ -551,16 +553,32 @@ img.mobile {
   }
 }
 @media (max-width: 550px) {
+  .overview-section .description-container p {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+  .overview-section .image-container h2 {
+    top: 25%;
+  }
   .overview-section .image-container .video-container {
     background-size: 120%;
     width: 100%;
     height: 500px;
   }
-
   .overview-section .image-container video {
     width: 80%;
     margin-top: 12px;
     margin-left: 12px;
+  }
+}
+@media (max-width: 450px) {
+  .overview-section .image-container h2 {
+    top: 30%;
+  }
+}
+@media (max-width: 400px) {
+  .overview-section .image-container h2 {
+    top: 35%;
   }
 }
 /*========END OF HOMEPAGE-OVERVIEW SECTION======*/
@@ -596,136 +614,6 @@ img.mobile {
   padding: 12px;
 }
 
-/*.image-container{
-    border-radius: 12px;
-    @include column-img;
-    img{
-        width: 100%;
-        height: auto;
-        border-radius: 12px
-    }
-}
-.description-container{
-    @include column-description;
-    margin-left: 48px;
-    .gameplay-btn{
-        float: right;
-    }
-    .gameplay-item{
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 48px;
-        width: 100%;
-        .img-icon{
-            width: 20%;
-            height: auto;
-            margin-right: 24px;
-            img{
-                width: 80%;
-            }
-        }
-
-        .text-description{
-            display: flex;
-            flex-direction: column;
-            width: 80%;
-        }
-    }
-    h4{
-        text-transform: uppercase;
-        line-height: 1.2;
-        font-family: 'Cinzel', serif;
-        color: $primaryColor;
-        margin-bottom: 12px;
-    }
-}
-}
-
-/*@media only screen and (max-width: 900px){
-.gameplay-section{
-    .description-container{
-        .gameplay-item{
-            .img-icon{
-                width: 30%;
-                height: auto;
-                margin-right: 12px;
-                img{
-                    width: 100%;
-                }
-            }
-
-            .text-description{
-                width: 70%;
-            }
-        }
-    }
-}
-
-}
-@media only screen and (max-width: 700px){
-.gameplay-section{
-    .gameplay-wrapper{
-        @include responsive;
-        margin-top: 24px;
-
-        .description-container, .image-container{
-            width: 100%;
-            padding-right: unset;
-        }
-    }
-    .description-container{
-        margin-top: 48px;
-        margin-left: unset;
-        .gameplay-item{
-            .img-icon{
-                width: 20%;
-                height: auto;
-                margin-right: 24px;
-            }
-        }
-    }
-
-}
-
-}
-
-
-@media only screen and (max-width: 400px){
-.gameplay-section{
-    .description-container{
-        .gameplay-btn{
-           float: unset;
-           margin: auto;
-           display: flex;
-           justify-content: center;
-        }
-        .front-padding{
-            padding: 15px 30px;
-        }
-    }
-    .gameplay-wrapper{
-        .gameplay-item{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            text-align: center;
-            .img-icon{
-                width: 30%;
-                height: auto;
-                margin-bottom: 12px;
-                img{
-                    max-width: 80%;
-                    height: auto;
-                }
-            }
-
-            .text-description{
-                width: 100%;
-            }
-        }
-    }
-}*/
 .gameplay-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -740,8 +628,9 @@ img.mobile {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: rgba(2, 1, 10, 0.8);
-  border: 2px solid #20BFB7;
+  background-color: radial-gradient(63.26% 63.26% at 50% 48.78%, rgba(184, 134, 11, 0.8) 0%, rgba(52, 39, 5, 0.3) 100%);
+  border: 2px solid #DD7B1E;
+  border-radius: 12px;
   max-width: 350px;
   padding: 12px;
   height: 480px;
@@ -765,8 +654,11 @@ img.mobile {
   margin-bottom: 12px;
   text-transform: uppercase;
   line-height: 1.2;
-  font-family: "Cinzel", serif;
+  font-family: ViceCitySans;
   color: #FD5200;
+}
+.gameplay-item p {
+  font-family: "Cinzel", serif;
 }
 
 @media only screen and (max-width: 600px) {
@@ -808,7 +700,7 @@ img.mobile {
   content: "";
   position: absolute;
   width: 2px;
-  background-color: aqua;
+  background-color: #DD7B1E;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -826,8 +718,8 @@ img.mobile {
   width: 20px;
   height: 20px;
   right: -12px;
-  background-color: #20BFB7;
-  border: 4px solid #327572;
+  background-color: #8d6e1f;
+  border: 4px solid #B8860B;
   top: 15px;
   border-radius: 50%;
   z-index: 1;
@@ -846,9 +738,9 @@ img.mobile {
   width: 0;
   z-index: 1;
   right: 30px;
-  border: medium solid #19c4c4;
+  border: medium solid #DD7B1E;
   border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent #19c4c4;
+  border-color: transparent transparent transparent #DD7B1E;
 }
 .roadmap-container .right::before {
   content: " ";
@@ -858,9 +750,9 @@ img.mobile {
   width: 0;
   z-index: 1;
   left: 30px;
-  border: medium solid #19c4c4;
+  border: medium solid #DD7B1E;
   border-width: 10px 10px 10px 0;
-  border-color: transparent #19c4c4 transparent transparent;
+  border-color: transparent #DD7B1E transparent transparent;
 }
 .roadmap-container .right::after {
   left: -16px;
@@ -887,9 +779,9 @@ img.mobile {
   }
   .roadmap-container .container::before {
     left: 60px;
-    border: medium solid #19c4c4;
+    border: medium solid #DD7B1E;
     border-width: 10px 10px 10px 0;
-    border-color: transparent #19c4c4 transparent transparent;
+    border-color: transparent #DD7B1E transparent transparent;
   }
   .roadmap-container .left::after, .roadmap-container .right::after {
     left: 15px;
@@ -921,8 +813,8 @@ img.mobile {
 .roadmap-wrapper {
   max-width: 380px;
   height: auto;
-  background-color: #02010a;
-  border: 1px solid aqua;
+  background-color: #241b05;
+  border: 1px solid #DD7B1E;
   border-radius: 12px;
   padding: 12px;
 }
@@ -941,8 +833,8 @@ img.mobile {
 .roadmap-wrapper .roadmap-ring {
   width: 100px !important;
   border-radius: 50%;
-  background-color: #02010a;
-  border: 5px solid #20BFB7;
+  background-color: #241b05;
+  border: 5px solid #B8860B;
   height: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -956,7 +848,7 @@ img.mobile {
 }
 .roadmap-wrapper .headind-exception {
   font-size: 48px !important;
-  color: #20BFB7;
+  color: #B8860B;
 }
 .roadmap-wrapper .roadmap-item {
   margin-top: 48px;
@@ -1440,7 +1332,7 @@ footer {
 .token-wrapper .token-details {
   width: 50%;
   height: auto;
-  border: 2px solid aqua;
+  border: 2px solid #DD7B1E;
   border-radius: 12px;
   padding: 12px;
 }

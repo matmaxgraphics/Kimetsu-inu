@@ -44,6 +44,8 @@ h1 {
   
 h2 {
     font-size: clamp(1.72rem, 3vw, 2.5rem);
+    // background: url('../images/heading-bg.png') no-repeat center;
+    // background-size: 600px;
 }
   
 h4 {
@@ -52,12 +54,14 @@ h4 {
 h1, h2, h3{
     font-family: 'Cinzel', serif;
     color: $primaryColor;
-    -webkit-text-stroke: 0.1px $borderTextColor;
     text-transform: uppercase;
     font-weight: 500;
 }
 a{
     text-decoration: none;
+    color: #fff;
+}
+button{
     color: #fff;
 }
 .btn{
@@ -235,7 +239,7 @@ li{
         display: block;
         cursor: pointer;
         img{
-            width: 48px;
+            width: 50px;
             height: auto;
         }
     }
@@ -283,7 +287,6 @@ li{
 .hero-img{
     position: relative;
     height: 50%;
-    margin-top: 20px;
     width: 100%;
 }
 img.mobile{
@@ -311,11 +314,6 @@ img.mobile{
     }
 }
 
-@media (max-width: 1040px){
-    .hero-img{
-        margin-top: 20%;
-    }
-}
 @media only screen and (max-width: 940px) {
     .hero-img{
         height: 60%;
@@ -422,6 +420,11 @@ img.mobile{
     
     .image-container{
         @include column-img;
+        h2{
+            position: relative;
+            text-align: center;
+            top: 20%;
+        }
         .video-container{
             background: url('../images/video-frame.png') no-repeat center;
             background-size: contain;
@@ -471,17 +474,51 @@ img.mobile{
 }
 
 @media (max-width: 550px){
-    .overview-section .image-container .video-container {
-        background-size: 120%;
-        width: 100%;
-        height: 500px;
+    .overview-section{
+        .description-container{
+            p {
+                font-size: 18px;
+                line-height: 1.2;
+            }
+        }
+        .image-container{
+            h2{
+                top: 25%;
+            }
+            .video-container {
+                background-size: 120%;
+                width: 100%;
+                height: 500px;
+            }
+            video {
+                width: 80%;
+                margin-top: 12px;
+                margin-left: 12px;
+            }
+        }
     }
-    .overview-section .image-container video {
-        width: 80%;
-        margin-top: 12px;
-        margin-left: 12px;
+}
+
+@media (max-width: 450px){
+    .overview-section{
+        .image-container{
+            h2{
+                top: 30%;
+            }
+        }
     }
-  }
+}
+
+@media (max-width: 400px){
+    .overview-section{
+        .image-container{
+            h2{
+                top: 35%;
+            }
+        }
+    }
+}
+
 /*========END OF HOMEPAGE-OVERVIEW SECTION======*/
 
 
@@ -512,143 +549,14 @@ img.mobile{
     
 }
 
-/*.image-container{
-    border-radius: 12px;
-    @include column-img;
-    img{
-        width: 100%;
-        height: auto;
-        border-radius: 12px
-    }
-}
-.description-container{
-    @include column-description;
-    margin-left: 48px;
-    .gameplay-btn{
-        float: right;
-    }
-    .gameplay-item{
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 48px;
-        width: 100%;
-        .img-icon{
-            width: 20%;
-            height: auto;
-            margin-right: 24px;
-            img{
-                width: 80%;
-            }
-        }
-        
-        .text-description{
-            display: flex;
-            flex-direction: column;
-            width: 80%;
-        }
-    }
-    h4{
-        text-transform: uppercase;
-        line-height: 1.2;
-        font-family: 'Cinzel', serif;
-        color: $primaryColor;
-        margin-bottom: 12px;
-    }
-}
-}
-
-/*@media only screen and (max-width: 900px){
-.gameplay-section{
-    .description-container{
-        .gameplay-item{
-            .img-icon{
-                width: 30%;
-                height: auto;
-                margin-right: 12px;
-                img{
-                    width: 100%;
-                }
-            }
-            
-            .text-description{
-                width: 70%;
-            }
-        }
-    }
-}
-
-}
-@media only screen and (max-width: 700px){
-.gameplay-section{
-    .gameplay-wrapper{
-        @include responsive;
-        margin-top: 24px;
-
-        .description-container, .image-container{
-            width: 100%;
-            padding-right: unset;
-        }
-    }
-    .description-container{
-        margin-top: 48px;
-        margin-left: unset;
-        .gameplay-item{
-            .img-icon{
-                width: 20%;
-                height: auto;
-                margin-right: 24px;
-            }
-        }
-    }
-
-}
-
-}
-
-
-@media only screen and (max-width: 400px){
-.gameplay-section{
-    .description-container{
-        .gameplay-btn{
-           float: unset;
-           margin: auto;
-           display: flex;
-           justify-content: center;
-        }
-        .front-padding{
-            padding: 15px 30px;
-        }
-    }
-    .gameplay-wrapper{
-        .gameplay-item{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            text-align: center;
-            .img-icon{
-                width: 30%;
-                height: auto;
-                margin-bottom: 12px;
-                img{
-                    max-width: 80%;
-                    height: auto;
-                }
-            }
-            
-            .text-description{
-                width: 100%;
-            }
-        }
-    }
-}*/
 .gameplay-item{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: rgba(2, 1, 10, 0.8);
-    border: 2px solid $secondaryColor;
+    background-color: radial-gradient(63.26% 63.26% at 50% 48.78%, rgba(184, 134, 11, 0.8) 0%, rgba(52, 39, 5, 0.3) 100%);;
+    border: 2px solid $borderColor;
+    border-radius: 12px;
     max-width: 350px;
     padding: 12px;
     height: 480px;
@@ -670,8 +578,11 @@ img.mobile{
         margin-bottom: 12px;
         text-transform: uppercase;
         line-height: 1.2;
-        font-family: 'Cinzel', serif;
+        font-family: $secondaryFont;
         color: $primaryColor;
+    }
+    p{
+        font-family: $primaryFont;
     }
 }
 
@@ -709,7 +620,7 @@ img.mobile{
         content: '';
         position: absolute;
         width: 2px;
-        background-color: rgb(0, 255, 255);;
+        background-color: $borderColor;
         top: 0;
         bottom: 0;
         left: 50%;
@@ -731,8 +642,8 @@ img.mobile{
         width: 20px;
         height: 20px;
         right: -12px;
-        background-color: #20BFB7;
-        border: 4px solid #327572;
+        background-color: $accentColor;
+        border: 4px solid #B8860B;
         top: 15px;
         border-radius: 50%;
         z-index: 1;
@@ -757,9 +668,9 @@ img.mobile{
         width: 0;
         z-index: 1;
         right: 30px;
-        border: medium solid rgb(25, 196, 196);
+        border: medium solid $borderColor;
         border-width: 10px 0 10px 10px;
-        border-color: transparent transparent transparent rgb(25, 196, 196);
+        border-color: transparent transparent transparent $borderColor;
     }
     
     /* Add arrows to the right container (pointing left) */
@@ -771,9 +682,9 @@ img.mobile{
         width: 0;
         z-index: 1;
         left: 30px;
-        border: medium solid rgb(25, 196, 196);
+        border: medium solid $borderColor;
         border-width: 10px 10px 10px 0;
-        border-color: transparent rgb(25, 196, 196) transparent transparent;
+        border-color: transparent $borderColor transparent transparent;
     }
     
     /* Fix the circle for containers on the right side */
@@ -803,9 +714,9 @@ img.mobile{
         /* Make sure that all arrows are pointing leftwards */
         .container::before {
             left: 60px;
-            border: medium solid rgb(25, 196, 196);
+            border: medium solid $borderColor;
             border-width: 10px 10px 10px 0;
-            border-color: transparent rgb(25, 196, 196) transparent transparent;
+            border-color: transparent $borderColor transparent transparent;
         }
         
         /* Make sure all circles are at the same spot */
@@ -856,9 +767,8 @@ img.mobile{
     .roadmap-ring{
         width: 100px !important;
         border-radius: 50%;
-        background-color: rgb(2, 1, 10);
-        border: 5px solid $secondaryColor;
-        // padding: 12px;
+        background-color: $bgColor;
+        border: 5px solid #B8860B;
         height: 100px;
         display: flex;
         justify-content: center;
@@ -866,7 +776,7 @@ img.mobile{
     }
     .headind-exception{
         font-size: 48px !important;
-        color: $secondaryColor;
+        color: #B8860B;
     }
 
     .roadmap-item{
