@@ -61,15 +61,12 @@ a {
 }
 
 .btn {
-  padding: 15px 40px;
-  border: 2px solid #ffb800;
-  border-radius: 24px 8px;
-  background: -webkit-gradient(linear, left top, right top, color-stop(8%, rgba(32, 191, 183, 0.2)), color-stop(58.79%, rgba(191, 249, 146, 0.186)), to(rgba(32, 191, 183, 0.2))), #20BFB7;
-  background: linear-gradient(90deg, rgba(32, 191, 183, 0.2) 8%, rgba(191, 249, 146, 0.186) 58.79%, rgba(32, 191, 183, 0.2) 100%), #20BFB7;
+  padding: 20px 40px;
+  background: url("../images/button.png") no-repeat center;
+  background-size: contain;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  height: 54px;
-  width: auto;
+  border: unset;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,6 +76,9 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
 }
 
 .pushable {
@@ -91,12 +91,12 @@ a {
 
 .pushable:hover .front {
   -webkit-transform: translateY(-8px);
-          transform: translateY(-8px);
+  transform: translateY(-8px);
 }
 
 .pushable:active .front {
   -webkit-transform: translateY(-4px);
-          transform: translateY(-4px);
+  transform: translateY(-4px);
 }
 
 .front {
@@ -104,11 +104,11 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 15px 40px;
   border-radius: 8px;
   font-size: 16px;
@@ -116,7 +116,7 @@ a {
   background: linear-gradient(190deg, #00ffff 20%, #336699 100%);
   color: white;
   -webkit-transform: translateY(-6px);
-          transform: translateY(-6px);
+  transform: translateY(-6px);
   will-change: transform;
   -webkit-transition: -webkit-transform 250ms;
   transition: -webkit-transform 250ms;
@@ -233,10 +233,6 @@ li {
   color: #20BFB7;
 }
 
-.nav-cta {
-  margin-top: 12px;
-}
-
 @media only screen and (max-width: 1040px) {
   .navbar {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #02010A), color-stop(28.12%, rgba(2, 1, 10, 0.78)), to(rgba(2, 1, 10, 0.03)));
@@ -280,19 +276,20 @@ li {
     display: block;
     cursor: pointer;
   }
-
-  .hamburger.active .bar:nth-child(2) {
-    opacity: 0;
+  .hamburger img {
+    width: 48px;
+    height: auto;
   }
 
-  .hamburger.active .bar:nth-child(1) {
-    -webkit-transform: translateY(8px) rotate(45deg);
-    transform: translateY(8px) rotate(45deg);
+  .hamburger.active img {
+    display: none;
   }
 
-  .hamburger.active .bar:nth-child(3) {
-    -webkit-transform: translateY(-8px) rotate(-45deg);
-    transform: translateY(-8px) rotate(-45deg);
+  .hamburger.active::after {
+    content: url("../images/close-sm-btn.png");
+    width: 20px;
+    height: auto;
+    position: relative;
   }
 }
 /*=======END OF NAVBAR STYLING======*/
@@ -338,7 +335,7 @@ li {
   position: relative;
   height: 50%;
   margin-top: 20px;
-  width: 100vw;
+  width: 100%;
 }
 
 img.mobile {
@@ -455,8 +452,8 @@ img.mobile {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.8))), url("../images/bg-3.jpg") no-repeat center;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../images/bg-3.jpg") no-repeat center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.4))), url("../images/background-md.png") no-repeat center;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url("../images/background-md.png") no-repeat center;
   background-size: cover;
   height: auto;
   padding: 24px;
@@ -477,77 +474,35 @@ img.mobile {
       -ms-flex-pack: center;
           justify-content: center;
   width: 50%;
-  margin-right: 48px;
-  border: 1px solid #20BFB7;
-  background-color: rgba(2, 1, 10, 0.8);
-  position: relative;
-  padding-right: unset;
-  height: auto;
-  -webkit-clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
-          clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
-}
-.overview-section .description-container .overview-text {
-  padding: 12px;
-  width: 100%;
-  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.overview-section .description-container .overview-text .pre-h2 {
-  font-family: "Conthrax", sans-serif;
-  position: absolute;
-  top: 15px;
-  background: unset;
-  color: rgba(2, 1, 10, 0.37);
-  -webkit-text-fill-color: unset;
-  margin-left: 2px;
-}
-.overview-section .description-container .overview-text .initial-h2 {
-  font-family: "Conthrax", sans-serif;
-  background: linear-gradient(9deg, aqua 7%, white 80%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: unset;
-  position: relative;
-  z-index: 1;
-}
-.overview-section .description-container .explainer-paragraph {
-  padding: 12px 24px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 .overview-section .description-container p {
-  margin-bottom: 24px;
-  font-weight: 400;
-  text-align: center;
+  font-size: 24px;
+  max-width: 500px;
+  font-weight: 500;
+  text-align: left;
 }
-.overview-section .description-container .front {
-  padding: 15px 30px;
+.overview-section .description-container button {
+  color: #fff;
+  margin-top: 24px;
+}
+.overview-section .description-container .btn {
+  background: url("../images/button-lg.png") no-repeat center;
+  background-size: contain;
 }
 .overview-section .image-container {
-  background: url("../images/video-frame.png") no-repeat;
+  width: 50%;
+}
+.overview-section .image-container .video-container {
+  background: url("../images/video-frame.png") no-repeat center;
   background-size: contain;
-  background-position: center;
-  height: 450px;
+  width: 100%;
+  height: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -559,10 +514,9 @@ img.mobile {
           align-items: center;
 }
 .overview-section .image-container video {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  max-height: 330px;
+  width: 65%;
+  margin-top: 12px;
+  margin-left: 12px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -572,7 +526,8 @@ img.mobile {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 100%;
-    margin-top: 12px;
+    margin-top: unset;
+    padding: unset;
   }
   .overview-section .description-container, .overview-section .image-container {
     width: 100%;
@@ -581,6 +536,7 @@ img.mobile {
   .overview-section .description-container {
     margin-top: 48px;
     margin-left: unset;
+    padding: 24px;
   }
   .overview-section .description-container a {
     margin-bottom: 24px;
@@ -591,18 +547,33 @@ img.mobile {
     height: 450px;
   }
   .overview-section .image-container video {
-    width: 80%;
     max-height: 310px;
   }
 }
-@media (max-width: 470px) {
-  .overview-section .description-container .overview-text {
-    padding: 24px;
-  }
-  .overview-section .description-container .overview-text .pre-h2 {
-    top: 26px;
-  }
+/*@media (max-width: 560px){
+    .overview-section{
+        .image-container{
+            width: 100%;
+            video{
+                width: fit-content;
+                max-height: 60%;
+            }
+        }  
+    }
+
 }
+
+@media (max-width: 500px){
+    .overview-section{
+        .image-container{
+            video{
+                width: 80%;
+                max-height: 50%;
+            }
+        }  
+    }
+
+}*/
 /*========END OF HOMEPAGE-OVERVIEW SECTION======*/
 /*=========HOMEPAGE GAMEPLAY SECTION STYLING========*/
 .gameplay-section {
