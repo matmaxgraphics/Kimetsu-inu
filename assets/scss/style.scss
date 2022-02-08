@@ -351,6 +351,22 @@ img.mobile{
     }
 }
 
+.fire-group{
+    img{
+        height: 200px;
+        width: auto;
+        position: absolute;
+    }
+    .left-fire {
+        top: 70%;
+        left: 10px;
+    }
+    .right-fire {
+        right: 1%;
+        top: -0%;
+    }
+}
+
 @media only screen and (max-width: 940px) {
     .hero-img{
         height: 60%;
@@ -380,6 +396,22 @@ img.mobile{
             width: 100%;
         }
     }
+    .fire-group{
+        img{
+            height: 100px;
+            width: auto;
+            position: absolute;
+        }
+        .left-fire {
+            top: 50%;
+            left: -40px;
+        }
+        .right-fire {
+            right: -10%;
+            top: -0%;
+        }
+    }
+    
 }
 
 

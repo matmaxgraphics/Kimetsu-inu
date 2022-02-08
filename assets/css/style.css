@@ -434,6 +434,20 @@ img.mobile {
   margin-right: 24px;
 }
 
+.fire-group img {
+  height: 200px;
+  width: auto;
+  position: absolute;
+}
+.fire-group .left-fire {
+  top: 70%;
+  left: 10px;
+}
+.fire-group .right-fire {
+  right: 1%;
+  top: 0%;
+}
+
 @media only screen and (max-width: 940px) {
   .hero-img {
     height: 60%;
@@ -460,6 +474,20 @@ img.mobile {
   }
   .hero-details .available-img {
     width: 100%;
+  }
+
+  .fire-group img {
+    height: 100px;
+    width: auto;
+    position: absolute;
+  }
+  .fire-group .left-fire {
+    top: 50%;
+    left: -40px;
+  }
+  .fire-group .right-fire {
+    right: -10%;
+    top: 0%;
   }
 }
 @media (max-width: 430px) {
