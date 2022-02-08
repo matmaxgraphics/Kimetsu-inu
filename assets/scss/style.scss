@@ -44,8 +44,6 @@ h1 {
   
 h2 {
     font-size: clamp(1.72rem, 3vw, 2.5rem);
-    // background: url('../images/heading-bg.png') no-repeat center;
-    // background-size: 600px;
 }
   
 h4 {
@@ -63,6 +61,35 @@ a{
 }
 button{
     color: #fff;
+}
+.button-img{
+    width: 220px;
+    height: auto;
+    position: relative;
+    padding: 12px;
+}
+
+.button-text{
+    position: absolute;
+}
+.heading-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heading-background{
+    max-width: 400px;
+    height: auto;
+    position: relative;
+    padding: 12px;
+    color: $headingText;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading-text{
+    position: absolute;
 }
 .btn{
     padding: 20px 40px;
@@ -604,7 +631,6 @@ img.mobile{
     margin-bottom: 48px;
     h2{
         text-align: center;
-        margin-bottom: 48px;
     }
 }
 .roadmap-container{
@@ -881,7 +907,6 @@ footer{
 
     h2{
         text-align: center;
-        margin-bottom: 24px;
     }
     .next, .prev{
         width: 36px;
@@ -890,6 +915,7 @@ footer{
 }
 .splide__arrow{
     background: unset !important;
+    top: -11% !important;
 }
 .character-container{
     padding: 24px;

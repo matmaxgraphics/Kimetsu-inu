@@ -63,6 +63,50 @@ button {
   color: #fff;
 }
 
+.button-img {
+  width: 220px;
+  height: auto;
+  position: relative;
+  padding: 12px;
+}
+
+.button-text {
+  position: absolute;
+}
+
+.heading-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.heading-background {
+  max-width: 400px;
+  height: auto;
+  position: relative;
+  padding: 12px;
+  color: #342705;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.heading-text {
+  position: absolute;
+}
+
 .btn {
   padding: 20px 40px;
   background: url("../images/button.png") no-repeat center;
@@ -676,7 +720,6 @@ img.mobile {
 }
 .roadmap-section h2 {
   text-align: center;
-  margin-bottom: 48px;
 }
 
 .roadmap-container {
@@ -975,7 +1018,6 @@ footer {
 }
 .character-section h2 {
   text-align: center;
-  margin-bottom: 24px;
 }
 .character-section .next, .character-section .prev {
   width: 36px;
@@ -984,6 +1026,7 @@ footer {
 
 .splide__arrow {
   background: unset !important;
+  top: -11% !important;
 }
 
 .character-container {
