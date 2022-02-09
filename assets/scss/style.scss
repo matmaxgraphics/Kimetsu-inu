@@ -177,6 +177,9 @@ li{
     line-height: 1.4;
     font-weight: 500;
 }
+.border-radius{
+    border-radius: 12px;
+}
 /*=======HEADER AND NAVBAR SECTION STYLING======*/
 .token-address{
     width: 100%;
@@ -205,9 +208,14 @@ li{
     background: linear-gradient(180deg, #02010A 0%, rgba(2, 1, 10, 0.78) 28.12%, rgba(2, 1, 10, 0.03) 100%);
 }
 .logo {
-    width: 80px;
+    width: 120px;
     height: auto;
     margin-top: 12px;
+}
+@media (max-width: 360px){
+    .logo {
+    width: 80px;
+  }
 }
 .hamburger{
     display: none;
@@ -256,7 +264,6 @@ li{
         flex-direction: column;
         background-color: $bgColor;
         width: 100%;
-        border-radius: 10px;
         text-align: center;
         transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
@@ -266,6 +273,8 @@ li{
     .nav-menu.active {
         left: 0;
         z-index: 99999999999;
+        height: 100vh;
+        margin-top: -50px;
     }
 
     .nav-item {
@@ -288,6 +297,7 @@ li{
         width: 20px;
         height: auto;
         position: relative;
+        z-index: 9999999999999;
     }
 }
 
@@ -304,6 +314,8 @@ li{
     width: 80%;
     margin: auto;
     margin-bottom: 48px;
+    position: relative;
+    z-index: 1;
 }
 .hero-details {
     display: flex;
@@ -334,6 +346,8 @@ img.mobile{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
+    z-index: 1;
     h2{
         margin-bottom: 24px;
     }
@@ -407,8 +421,7 @@ img.mobile{
             left: -40px;
         }
         .right-fire {
-            right: -10%;
-            top: -0%;
+            top: 40%;
         }
     }
     
@@ -449,6 +462,15 @@ img.mobile{
             margin-right: 8px;
         }
     }
+    .fire-group{
+        .left-fire {
+            top: 30%;
+            left: -40px;
+        }
+        .right-fire {
+            top: 30%;
+        }
+    }
 }
 
 /*=======END OF HEADER SECTION STYLING======*/
@@ -462,7 +484,7 @@ img.mobile{
     @include row-column;
     margin-top: unset;
     justify-content: center;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url('../images/background-md.png') no-repeat center;
+    background: url('../images/overview-bg.png') no-repeat center;
     background-size: cover;
     height: auto;
     padding: 24px;
@@ -615,6 +637,9 @@ img.mobile{
         place-items: center;
         padding: 12px;
     }
+    .margin-bottom{
+        margin-bottom: 24px;
+    }
     
 }
 
@@ -623,9 +648,9 @@ img.mobile{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: radial-gradient(63.26% 63.26% at 50% 48.78%, rgba(184, 134, 11, 0.8) 0%, rgba(52, 39, 5, 0.3) 100%);;
+    background: radial-gradient(63.26% 63.26% at 50% 48.78%, rgba(184, 134, 11, 0.3) 0%, rgba(52, 39, 5, 0.3) 100%);;
     border: 2px solid $borderColor;
-    border-radius: 12px;
+    border-radius: 24px;
     max-width: 350px;
     padding: 12px;
     height: 480px;
@@ -645,13 +670,16 @@ img.mobile{
 
     h4{
         margin-bottom: 12px;
-        text-transform: uppercase;
         line-height: 1.2;
         font-family: $secondaryFont;
-        color: $primaryColor;
+        color: #fff;
+        font-size: 32px;
     }
     p{
         font-family: $primaryFont;
+    }
+    h4, p{
+        text-align: left;
     }
 }
 
@@ -875,7 +903,7 @@ img.mobile{
 .character-section{
     position: relative;
     margin-bottom: 48px;
-    background: url('../images/char-bg.png') no-repeat center;
+    background: linear-gradient(180deg, #02010A 10%, rgba(0, 0, 0, 0.78) 28.12%, rgba(2, 1, 10, 0.03) 100%), url('../images/char-bg.png') no-repeat center;
     background-size: cover;
     max-width: 1200px;
     margin: auto;
@@ -884,8 +912,11 @@ img.mobile{
         text-align: center;
         font-weight: 600;
     }
+    h2.font-exception{
+        font-size: 36px;
+    }
     .next, .prev{
-        width: 36px;
+        width: 40px;
         height: auto;
     }
 }

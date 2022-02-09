@@ -203,6 +203,10 @@ li {
   font-weight: 500;
 }
 
+.border-radius {
+  border-radius: 12px;
+}
+
 /*=======HEADER AND NAVBAR SECTION STYLING======*/
 .token-address {
   width: 100%;
@@ -245,11 +249,16 @@ li {
 }
 
 .logo {
-  width: 80px;
+  width: 120px;
   height: auto;
   margin-top: 12px;
 }
 
+@media (max-width: 360px) {
+  .logo {
+    width: 80px;
+  }
+}
 .hamburger {
   display: none;
 }
@@ -312,7 +321,6 @@ li {
             flex-direction: column;
     background-color: #241b05;
     width: 100%;
-    border-radius: 10px;
     text-align: center;
     -webkit-transition: 0.3s;
     transition: 0.3s;
@@ -324,6 +332,8 @@ li {
   .nav-menu.active {
     left: 0;
     z-index: 99999999999;
+    height: 100vh;
+    margin-top: -50px;
   }
 
   .nav-item {
@@ -348,6 +358,7 @@ li {
     width: 20px;
     height: auto;
     position: relative;
+    z-index: 9999999999999;
   }
 }
 /*=======END OF NAVBAR STYLING======*/
@@ -363,6 +374,8 @@ li {
   width: 80%;
   margin: auto;
   margin-bottom: 48px;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-details {
@@ -413,6 +426,8 @@ img.mobile {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
+  z-index: 1;
 }
 .cta-container h2 {
   margin-bottom: 24px;
@@ -486,8 +501,7 @@ img.mobile {
     left: -40px;
   }
   .fire-group .right-fire {
-    right: -10%;
-    top: 0%;
+    top: 40%;
   }
 }
 @media (max-width: 430px) {
@@ -514,6 +528,14 @@ img.mobile {
     font-size: 24px;
     margin-right: 8px;
   }
+
+  .fire-group .left-fire {
+    top: 30%;
+    left: -40px;
+  }
+  .fire-group .right-fire {
+    top: 30%;
+  }
 }
 /*=======END OF HEADER SECTION STYLING======*/
 /*=========OVERVIEW-HOMEPAGE-SECTION=======*/
@@ -532,8 +554,7 @@ img.mobile {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.4))), url("../images/background-md.png") no-repeat center;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url("../images/background-md.png") no-repeat center;
+  background: url("../images/overview-bg.png") no-repeat center;
   background-size: cover;
   height: auto;
   padding: 24px;
@@ -696,6 +717,9 @@ img.mobile {
   place-items: center;
   padding: 12px;
 }
+.gameplay-wrapper .margin-bottom {
+  margin-bottom: 24px;
+}
 
 .gameplay-item {
   display: -webkit-box;
@@ -711,9 +735,9 @@ img.mobile {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: radial-gradient(63.26% 63.26% at 50% 48.78%, rgba(184, 134, 11, 0.8) 0%, rgba(52, 39, 5, 0.3) 100%);
+  background: radial-gradient(63.26% 63.26% at 50% 48.78%, rgba(184, 134, 11, 0.3) 0%, rgba(52, 39, 5, 0.3) 100%);
   border: 2px solid #DD7B1E;
-  border-radius: 12px;
+  border-radius: 24px;
   max-width: 350px;
   padding: 12px;
   height: 480px;
@@ -735,13 +759,16 @@ img.mobile {
 }
 .gameplay-item h4 {
   margin-bottom: 12px;
-  text-transform: uppercase;
   line-height: 1.2;
   font-family: ViceCitySans;
-  color: #FD5200;
+  color: #fff;
+  font-size: 32px;
 }
 .gameplay-item p {
   font-family: "Cinzel", serif;
+}
+.gameplay-item h4, .gameplay-item p {
+  text-align: left;
 }
 
 @media only screen and (max-width: 600px) {
@@ -962,7 +989,8 @@ img.mobile {
 .character-section {
   position: relative;
   margin-bottom: 48px;
-  background: url("../images/char-bg.png") no-repeat center;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #02010A), color-stop(28.12%, rgba(0, 0, 0, 0.78)), to(rgba(2, 1, 10, 0.03))), url("../images/char-bg.png") no-repeat center;
+  background: linear-gradient(180deg, #02010A 10%, rgba(0, 0, 0, 0.78) 28.12%, rgba(2, 1, 10, 0.03) 100%), url("../images/char-bg.png") no-repeat center;
   background-size: cover;
   max-width: 1200px;
   margin: auto;
@@ -971,8 +999,11 @@ img.mobile {
   text-align: center;
   font-weight: 600;
 }
+.character-section h2.font-exception {
+  font-size: 36px;
+}
 .character-section .next, .character-section .prev {
-  width: 36px;
+  width: 40px;
   height: auto;
 }
 
