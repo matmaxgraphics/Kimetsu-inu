@@ -1167,12 +1167,13 @@ footer {
   padding: 24px;
 }
 .footer-container .footer-content h4 {
-  font-family: "Cinzel", serif;
+  font-family: ViceCitySans;
   text-transform: uppercase;
   margin-bottom: 24px;
 }
 .footer-container .footer-content li {
   margin-bottom: 12px;
+  font-family: "Cinzel", serif;
 }
 .footer-container .footer-content li a {
   -webkit-transition: all 0.3s;
@@ -1201,10 +1202,16 @@ footer {
     padding-left: 12px;
     padding-bottom: 12px;
   }
-  .footer-container .footer-conten {
-    -webkit-box-flex: 0;
-        -ms-flex: 0;
-            flex: 0;
+}
+@media (max-width: 600px) {
+  .footer-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer-container .footer-content {
+    width: 100%;
   }
 }
 /*======END OF FOOTER SECTION STYLING=====*/

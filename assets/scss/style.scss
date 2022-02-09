@@ -1043,12 +1043,13 @@ footer{
         flex: 1;
         padding: 24px;
         h4{
-            font-family: 'Cinzel', serif;
+            font-family: $secondaryFont;
             text-transform: uppercase;
             margin-bottom: 24px;
         }
         li{
             margin-bottom: 12px;
+            font-family: $primaryFont;
             a{
                 transition: all 0.3s;
                 &:hover{
@@ -1072,8 +1073,13 @@ footer{
         flex-flow: row wrap;
         padding-left: 12px;
         padding-bottom: 12px;
-        .footer-conten{
-            flex: 0;
+    }
+}
+@media (max-width: 600px){
+    .footer-container{
+        flex-direction: column;
+        .footer-content{
+            width: 100%;
         }
     }
 }
