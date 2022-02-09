@@ -19,3 +19,14 @@ function closeMenu() {
 
 //AOS INITIALIZATION
 AOS.init();
+
+/*MODAL SCRIPT*/
+// Get the modal
+const modal = document.getElementById('modalBox');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}

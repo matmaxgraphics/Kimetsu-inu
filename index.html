@@ -106,10 +106,72 @@
 
 
     <section class="overview-section">
+        <div class="overview-modal" id="modalBox">
+            <div class="modal-wrapper">
+                <header>
+                    <div class="heading-content">
+                        <img src="assets/images/heading-bg.png" class="heading-background">
+                        <h2 class="heading-text">Overview</h2>
+                    </div>
+                    <span class="close" onclick="document.getElementById('modalBox').style.display='none'"><img src="assets/images/close-btn.png"></span>
+                </header>
+                
+                <main>
+                    <h4>Introduction</h4>
+                    <p>Through the parallels of the blockchain comes the next level of P2E gaming 
+                        where players will battle weekly to earn top score on the leaderboard. KINU 
+                        uses the latest blockchain technology to create an all-new experience, 
+                        combining P2E gaming, Anime, Manga and NFTs into something entirely unique: 
+                        The KinuVerse
+                    </p>
+
+                    <h4>Game Development</h4>
+                    <p>The team will be working with well-known Anime voice over actors and screenplay writers to create a
+                        wholesome experience including a P2E game with an Anime storyline based around dogs vs wolves,
+                        a Manga NFT comic book and an Anime series. The nature of the project is to provide an action
+                        packed experience for the investor to keep them entertained. The P2E game is currently in
+                        development and will be live-streamed daily allowing investors a glimpse inside the world of the
+                        creation process.
+                    </p>
+            
+                    <p>Once complete, the game will allow the investor's competitive side to come out. There will be a
+                        leaderboard and the top three players will be rewarded on a weekly basis from the gaming pool wallet.
+                        Points will be rewarded from completing tasks along with completion of each level.
+                    </p>
+
+                    <p>After completion of the game the team will also be releasing an Anime series and an NFT Manga
+                        series, as mentioned previously, evolving KINU into a large-scale brand that goes beyond the
+                        crypto-space. This is a vital step to ensure longevity of the project, as we will be tapping into the vast
+                        commercial possibilities of the gaming, NFT, Anime and Manga communities. To show you how vast the potential is, 
+                        we've compiled some data for you:
+                    </p>
+            
+                        <div class="gameplay-potential">
+                                <section class="potential-list">
+                                    <div class="upper">Anime sales in 2020, worldwide</div> 
+                                    <div class="lower">21.32 billion USD</div>
+                                </section>
+                                <section class="potential-list">
+                                    <div class="upper">Manga sales in 2020, North America</div> 
+                                    <div class="lower">250 million USD</div>      
+                                </section>
+                                <section class="potential-list">
+                                    <div class="upper">NFT sales, worldwide, november 15th 2021 to December 2021</div> 
+                                    <div class="lower">147 million USD</div>
+                                </section>
+                                <section class="potential-list">
+                                    <div class="upper">Gaming industry value in 2020, worldwide</div> 
+                                    <div class="lower">173.7 billion USD</div>
+                                </section>
+                        </div>                        
+                </main>
+
+            </div>
+        </div>
         <div class="description-container">
-            <p>Three Shibas on a mission to rescue their abducted Shiba Puppy from the hand of a
+            <p class="overview-intro-p">Three Shibas on a mission to rescue their abducted Shiba Puppy from the hand of a
                 demon wolf</p>
-                <a href="overview.html" role="button" class="heading-content">
+                <a role="button" class="heading-content pointer-cursor" onclick="document.getElementById('modalBox').style.display='block'">
                     <img src="assets/images/button-lg.png" class="button-img">
                     <span class="button-text">Overview</span>
                 </a>
@@ -148,7 +210,7 @@
 
                 <div class="gameplay-item" data-aos="fade-up" data-aos-duration="700" data-aos-easing="ease-in-quad">
                     <div class="img-icon">
-                        <img src="assets/images/game-char.gif" class="gif-img" alt="iconic image for selecting game character">
+                        <img src="assets/images/game-char.gif" class="gif-img gif-background" alt="iconic image for selecting game character">
                     </div>
                     <div class="text-description margin-bottom">
                         <h4>Choose a character to play</h4>

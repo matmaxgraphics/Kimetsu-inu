@@ -63,6 +63,10 @@ button {
   color: #fff;
 }
 
+.pointer-cursor {
+  cursor: pointer;
+}
+
 .button-img {
   width: 220px;
   height: auto;
@@ -189,7 +193,7 @@ button {
 }
 
 p {
-  font-size: 18px;
+  font-size: 16px;
   color: #fff;
   line-height: 1.4;
   font-weight: 500;
@@ -582,7 +586,7 @@ img.mobile {
       -ms-flex-align: start;
           align-items: flex-start;
 }
-.overview-section .description-container p {
+.overview-section .description-container .overview-intro-p {
   font-size: 24px;
   max-width: 500px;
   font-weight: 500;
@@ -602,6 +606,7 @@ img.mobile {
 .overview-section .image-container h2 {
   position: relative;
   text-align: center;
+  color: #342705;
   top: 20%;
 }
 .overview-section .image-container .video-container {
@@ -623,6 +628,100 @@ img.mobile {
   width: 65%;
   margin-top: 12px;
   margin-left: 12px;
+}
+
+.overview-modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  padding-bottom: 12px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+.modal-wrapper {
+  background: #222;
+  padding: 24px;
+  max-width: 700px;
+  height: auto;
+  margin: auto;
+}
+.modal-wrapper header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.modal-wrapper .heading-background {
+  max-width: 300px;
+}
+.modal-wrapper .heading-text {
+  font-family: ViceCitySans;
+  text-transform: none;
+  color: #342705;
+  margin-top: 24px;
+}
+.modal-wrapper .close img {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  width: 30px;
+  height: auto;
+  margin-left: 60px;
+  cursor: pointer;
+}
+.modal-wrapper .close img:hover, .modal-wrapper .close img:focus {
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.modal-wrapper main h4 {
+  color: #20BFB7;
+  font-size: 24px;
+  margin-bottom: 12px;
+  margin-top: 36px;
+}
+.modal-wrapper main p {
+  font-family: "Cinzel", serif;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+.modal-wrapper .gameplay-potential {
+  font-family: "Cinzel", serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+.modal-wrapper .gameplay-potential div {
+  padding: 12px;
+}
+.modal-wrapper .gameplay-potential .potential-list {
+  background-color: #fff;
+  margin-bottom: 24px;
+}
+.modal-wrapper .gameplay-potential .upper {
+  color: #000;
+}
+.modal-wrapper .gameplay-potential .lower {
+  background-color: #FD5200;
 }
 
 @media only screen and (max-width: 800px) {
@@ -656,8 +755,24 @@ img.mobile {
     max-height: 310px;
   }
 }
+@media (max-width: 750px) {
+  .modal-wrapper {
+    width: 70%;
+  }
+  .modal-wrapper .close img {
+    margin-left: 55px;
+  }
+}
+@media (max-width: 600px) {
+  .modal-wrapper {
+    width: 80%;
+  }
+  .modal-wrapper .heading-background {
+    max-width: 200px;
+  }
+}
 @media (max-width: 550px) {
-  .overview-section .description-container p {
+  .overview-section .description-container .overview-intro-p {
     font-size: 18px;
     line-height: 1.2;
   }
@@ -678,6 +793,14 @@ img.mobile {
 @media (max-width: 450px) {
   .overview-section .image-container h2 {
     top: 30%;
+  }
+}
+@media (max-width: 430px) {
+  .modal-wrapper {
+    width: 90%;
+  }
+  .modal-wrapper .close img {
+    margin-left: 20px;
   }
 }
 @media (max-width: 400px) {
@@ -750,11 +873,16 @@ img.mobile {
   margin-bottom: 24px;
 }
 .gameplay-item img.gif-img {
-  width: 80%;
+  width: 50%;
   height: auto;
 }
 .gameplay-item img.kinu-img {
   width: 60%;
+  height: auto;
+}
+.gameplay-item .gif-background {
+  background: url("../images/paper-bg.png") no-repeat center;
+  background-size: contain;
   height: auto;
 }
 .gameplay-item h4 {
