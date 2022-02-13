@@ -106,13 +106,16 @@
         </div>
     </header>
 
-    <img src="assets/images/prev-btn.png" alt="play button icon" class="player" id="playBtn">
+    
 
-    <audio id="webSound">
-        <source src="assets/audio/audio.mp3" type="audio/mp3">
-    </audio>
+    <div class="audio-player">
+        <span class="prompt-text">SOUND</span>
+        <img src="assets/images/play.png" alt="play button icon" class="player" id="playBtn">
 
-
+        <audio id="webSound" autoplay loop>
+            <source src="assets/audio/audio.mp3" type="audio/mp3">
+        </audio>
+    </div>
 
 <script src="assets/js/script.js"></script>
 <script>
@@ -122,10 +125,10 @@
     playButton.onclick = function(){
         if (bgAudio.paused){
             bgAudio.play();
-            playButton.src = "assets/images/next-btn.png";
+            playButton.src = "assets/images/pause.png";
         }else{
             bgAudio.pause();
-            playButton.src = "assets/images/prev-btn.png";
+            playButton.src = "assets/images/play.png";
         }
     }
 </script>

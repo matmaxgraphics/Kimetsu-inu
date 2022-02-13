@@ -30,3 +30,18 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+
+/*-------AUDIO PLAYER CONTROL------*/
+let bgAudio = document.getElementById("webSound");
+let playButton = document.getElementById("playBtn");
+
+playButton.onclick = function(){
+    if (bgAudio.paused){
+        bgAudio.play();
+        playButton.src = "assets/images/pause.png";
+    }else{
+        bgAudio.pause();
+        playButton.src = "assets/images/play.png";
+    }
+}

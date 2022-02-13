@@ -28,7 +28,6 @@ html {
 
 body {
   background-color: #241b05;
-  max-width: 1440px;
   margin: auto;
   color: #fff;
   font-family: ViceCitySans;
@@ -770,6 +769,11 @@ img.mobile {
   background-color: #FD5200;
 }
 
+@media (min-width: 1280px) {
+  .overview-section .description-container .overview-intro-p {
+    font-size: 28px;
+  }
+}
 @media only screen and (max-width: 800px) {
   .overview-section {
     -webkit-box-orient: vertical;
@@ -855,13 +859,28 @@ img.mobile {
   }
 }
 /*========END OF HOMEPAGE-OVERVIEW SECTION======*/
-.player {
-  width: 60px;
-  height: auto;
+.audio-player {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: fixed;
-  bottom: 0;
-  right: 12px;
-  left: 0;
+  right: 0;
+  bottom: 12px;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 12px;
+}
+.audio-player .prompt-text {
+  font-size: 12px !important;
+  margin-right: 8px;
+}
+.audio-player .player {
+  width: 36px;
+  height: auto;
+  cursor: pointer;
 }
 
 /*=========HOMEPAGE GAMEPLAY SECTION STYLING========*/
@@ -1405,6 +1424,7 @@ footer {
 .page-wrapper {
   padding: 0 36px;
   margin-top: 100px;
+  max-width: 1500px;
 }
 
 @media only screen and (max-width: 700px) {
