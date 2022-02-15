@@ -393,9 +393,51 @@ img.mobile{
     }
 }
 
+@media (max-width: 1280px){
+    .fire-group{
+        img{
+            height: 150px;
+        }
+        .left-fire {
+            top: 70%;
+            left: 10px;
+        }
+        .right-fire {
+            right: 1%;
+            top: 70%;
+        }
+    }
+}
+
 @media only screen and (max-width: 940px) {
     .hero-img{
         height: 60%;
+    }
+    .fire-group{
+        img{
+            height: 120px;
+        }
+        .left-fire {
+            top: 60%;
+            left: 10px;
+        }
+        .right-fire {
+            right: 1%;
+            top: 60%;
+        }
+    }
+}
+
+@media (max-width: 850px){
+    .fire-group{
+        .left-fire {
+            top: 50%;
+            left: 10px;
+        }
+        .right-fire {
+            right: 1%;
+            top: 45%;
+        }
     }
 }
 
@@ -404,6 +446,19 @@ img.mobile{
         .front {
             padding: 10px 30px;
             border-radius: 12px;
+        }
+    }
+    .fire-group{
+        img{
+            height: 100px;
+        }
+        .left-fire {
+            top: 40%;
+            left: 10px;
+        }
+        .right-fire {
+            right: 1%;
+            top: 30%;
         }
     }
 }
