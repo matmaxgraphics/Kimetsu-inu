@@ -53,7 +53,7 @@ h4 {
   font-size: clamp(20px, 2.5vw, 24px);
 }
 
-h1, h2, h3 {
+h1, h2 {
   font-family: "Cinzel", serif;
   color: #FD5200;
   text-transform: uppercase;
@@ -222,6 +222,22 @@ li {
   margin: auto;
 }
 
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 /*=======HEADER AND NAVBAR SECTION STYLING======*/
 .token-address {
   width: 100%;
@@ -303,11 +319,10 @@ li {
 }
 
 .nav-item {
-  margin-left: 3rem;
+  margin-left: 2rem;
 }
 
 .nav-link {
-  font-weight: 400;
   color: #fff;
 }
 .nav-link:hover {
@@ -382,7 +397,6 @@ li {
 /*=======HEADER SECTION STYLING======*/
 .header-section {
   background-size: cover;
-  max-width: 1440px;
   margin: auto;
   position: relative;
 }
@@ -477,7 +491,7 @@ img.mobile {
 }
 .fire-group .right-fire {
   right: 1%;
-  top: 0%;
+  top: 60%;
 }
 
 @media (max-width: 1280px) {
@@ -648,7 +662,6 @@ img.mobile {
 }
 .overview-section .description-container .overview-intro-p {
   font-size: 24px;
-  max-width: 500px;
   font-weight: 500;
   text-align: left;
 }
@@ -818,6 +831,19 @@ img.mobile {
   background-color: #FD5200;
 }
 
+@media (min-width: 1600px) {
+  .overview-section .image-container .video-container {
+    height: 700px;
+  }
+  .overview-section .image-container video {
+    margin-top: 24px;
+  }
+}
+@media (min-width: 1770px) {
+  .overview-section .image-container h2 {
+    top: 15%;
+  }
+}
 @media (min-width: 1280px) {
   .overview-section .description-container .overview-intro-p {
     font-size: 28px;
@@ -908,30 +934,6 @@ img.mobile {
   }
 }
 /*========END OF HOMEPAGE-OVERVIEW SECTION======*/
-.audio-player {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: fixed;
-  right: 0;
-  bottom: 12px;
-  z-index: 1000;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 12px;
-}
-.audio-player .prompt-text {
-  font-size: 12px !important;
-  margin-right: 8px;
-}
-.audio-player .player {
-  width: 36px;
-  height: auto;
-  cursor: pointer;
-}
-
 /*=========HOMEPAGE GAMEPLAY SECTION STYLING========*/
 .gameplay-section {
   margin-top: 96px;
@@ -1025,6 +1027,11 @@ img.mobile {
   text-align: left;
 }
 
+@media (min-width: 1600px) {
+  .gameplay-item {
+    max-width: 440px;
+  }
+}
 @media only screen and (max-width: 600px) {
   .gameplay-wraper .front {
     padding: 15px 30px;
@@ -1340,10 +1347,27 @@ img.mobile {
   }
 }
 /*=========END OF CHARACTER SECTION STYLING=======*/
+.kinuverse-section {
+  margin-top: 48px;
+  padding: 0 24px;
+}
+.kinuverse-section .margin-top {
+  margin-top: 96px;
+}
+.kinuverse-section .kinuplanet-details {
+  text-align: center;
+  font-family: "Cinzel", serif;
+  line-height: 1.3;
+  font-size: 20px;
+  max-width: 1100px;
+  margin-top: 36px;
+}
+
 .kinuverse-wrapper {
   background: #70c1f0;
   height: auto;
   width: 100%;
+  margin-top: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1478,6 +1502,9 @@ footer {
 }
 .page-wrapper h2 {
   font-family: viceCitySans;
+  color: #20BFB7;
+  font-weight: 700;
+  text-transform: capitalize;
 }
 .page-wrapper p {
   font-family: "Cinzel", serif;
@@ -1589,6 +1616,15 @@ footer {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .game-overview__section .description-container, .game-overview__section .image-container {
     width: 100%;
@@ -1779,6 +1815,25 @@ footer {
 }
 .task-item a {
   word-break: break-all;
+}
+
+.token-task-item {
+  font-family: "Cinzel", serif;
+  max-width: 900px;
+  font-weight: 600;
+}
+.token-task-item div {
+  padding: 12px;
+}
+.token-task-item .token-task-list {
+  background-color: #fff;
+  margin-bottom: 24px;
+}
+.token-task-item .upper {
+  color: #000;
+}
+.token-task-item .lower {
+  background-color: #FD5200;
 }
 
 @media only screen and (max-width: 860px) {
