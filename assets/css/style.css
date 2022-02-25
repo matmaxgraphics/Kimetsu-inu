@@ -1676,7 +1676,7 @@ footer {
 }
 
 @media only screen and (max-width: 700px) {
-  .player-section {
+  .player-section__wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1684,16 +1684,16 @@ footer {
     width: 100%;
     margin-top: 24px;
   }
-  .player-section .description-container, .player-section .image-container {
+  .player-section__wrapper .description-container, .player-section__wrapper .image-container {
     width: 100%;
     padding-right: unset;
   }
-  .player-section .description-container {
+  .player-section__wrapper .description-container {
     margin-top: 48px;
     margin-bottom: 24px;
     margin-left: unset;
   }
-  .player-section .description-container p {
+  .player-section__wrapper .description-container p {
     margin-top: unset;
     max-width: 100%;
   }
